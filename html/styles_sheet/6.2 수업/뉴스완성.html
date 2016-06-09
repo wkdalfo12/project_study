@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+       <style type="text/css">
+            *{margin: 0;padding: 0;}
+          body{background-image: url(../../img/bg.png);}
+          .header{background-image: url(../../img/bg_hd.png);height: 56px; width: 100%; }
+          .header .h_left{float:left;}
+          .header .h_left .home{
+              background-image: url(../../img/naver_news.png);
+              background-position: 0 -78px;width: 118px;height: 30px;
+              margin-left: 20px; float:left;
+          }
+          
+          .header .h_left .newsstand{ background-image: url(../../img/naver_news.png);
+              background-position:-121px -78px; width: 276px;height: 30px;
+              position: absolute; left:140px;
+          }
+          
+          
+          .header .h_right {float:right; display:inline-block; padding-top:10px;}
+          .header .h_right .login{position:absolute; top:7px; right:220px;}
+          .header .h_right .menu{background-image: url(../../img/naver_news2.png);
+              background-position: -199px -139px;
+              width: 17px;height: 17px;display:inline-block;padding-bottom:4px;
+              
+          }
+          .header .h_right .refresh{background-image: url(../../img/naver_news.png);
+              background-position: -254px -62px; width: 66px; height: 21px;display:inline-block;
+              
+          }
+          .header .h_right .setting{background-image: url(../../img/naver_news.png);
+              background-position: -334px -62px;width: 46px;height: 21px;display:inline-block;
+          }
+          .header .h_right .naver{background-image: url(../../img/naver_news.png);
+              background-position: -539px -273px; width: 60px;height: 21px;display:inline-block;
+          }
+          .header .h_center {text-align: center;padding:3px 0 0; }
+          .header .h_center button{width: 87px;height: 30px; }
+          .header .h_center button:first-child{margin-right:-10px;}
+          </style>
+</head>
+<body>
+     <div class="header">
+              
+          <div class="h_left">
+              <div class="home"></div>
+              <div class="newsstand"></div>
+          </div>
+          
+        
+        <div class="h_right">
+            <button class="login">로그인</button>
+                <a href="#"><div class="menu"></div></a>
+                <a href="#"><div class="refresh"></div></a>
+                <a href="#"><div class="setting"></div></a>
+                <a href="#"><div class="naver"></div></a>
+        </div>
+        
+        <div class="h_center">
+            <button>MY 뉴스</button>
+            <button>전체 언론사</button>
+        </div>
+    </div>
+    
+    <div class="content"></div>
+    <div class="footer"></div>
+</body>
+</html>
