@@ -1,0 +1,454 @@
+*{margin:0;padding:0;}
+html,body{height:100%;}
+ul,ol{list-style:none;}
+
+
+/*bg*/
+.wrapper
+{
+    height:100%;
+}
+
+/*헤더*/
+.wrapper .header
+{
+    position:relative;
+    width:100%;
+    height:100px;
+    left:0;
+    right:0;
+    box-sizing:border-box;
+    padding:0 20px;
+    background-color:rgba(255,255,255,0.2);
+    box-shadow:0 1px 7px rgba(0,0,0,0.2);
+    overflow:hidden;
+}
+
+.wrapper .header .logo-s
+{
+    float:left;
+    background-image: url(../jypimg/jjlogo.png);
+
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 15px;
+    transition: 1s;
+}
+.wrapper .header .nav
+{
+    float:right;
+}
+.wrapper .header .nav ul
+{
+    display:block;
+    font-size:0;
+
+}
+.wrapper .header .nav ul li
+{
+    display : inline-block;
+    font-size:16px;
+    line-height: 100px;
+    vertical-align: top;
+
+}
+.wrapper .header .nav ul li a
+{
+    padding:0 18px;
+    display:block;
+    font-family:'Oswald', sans-serif;
+    transition : 300ms;
+    text-decoration:none;
+    color: #3F3F3F;
+
+}
+.wrapper .header .logo-s a
+{
+    display:block;
+    width: 90px;
+    height: 70px;
+    margin-left:25px;
+
+}
+.wrapper .header .nav button
+{
+    display:none;
+    font-size:1em;
+    background-color: #08e9d1;
+    border:0px;
+    color:white;
+    height:100px;
+    line-height:100px;
+    width: 200px;
+    transition:1s;
+}
+
+
+
+/*하버*/
+.logo-s:hover{
+     transform: rotateY(180deg);
+}
+
+.wrapper .header .nav ul li a:hover
+{
+    border-top:5px #99E000 solid;
+    color:#99E000;
+
+
+}
+
+
+
+
+
+
+/*미디어커리*/
+
+@media screen and (max-width:905px){
+    .wrapper
+    {
+
+    }
+    .wrapper .logo
+    {
+        position:relative;
+        margin:0 auto;
+        top:10%;
+    }
+    .wrapper .header
+    {
+        min-height: 100px;
+        height:50px;
+        padding:0;
+        background-color:rgba(255,255,255,0.2);
+        box-shadow: 0 1px 7px rgba(0,0,0,0.2);
+
+    }
+    .wrapper .header .logo-s
+    {
+        height:55px;
+    }
+    .wrapper .header .logo-s a
+    {
+        background-size:cover;
+
+        width: 80px;
+        height: 40px;
+
+        margin-left:35px;
+
+    }
+    .wrapper .header .nav button
+    {
+        font-family:'Oswald', sans-serif;
+        display:block;
+        width: 200px;
+        height: 57px;
+        background-color: #99E000;
+        line-height: 57px;
+        text-align:center;
+        color:white;
+        font-size:14px;
+        border:0;
+
+    }
+
+    .wrapper .header .nav ul{
+        display:none;
+
+    }
+    .wrapper .header .nav ul li
+    {
+        line-height: 40px;
+        background: rgba(255,255,255,0.2);
+        color:#99E000;
+        width: 100%;
+        height: 46px;
+        font-size:16px;
+
+    }
+    .wrapper .header .nav ul li a{
+        color:#99E000;
+
+    }
+    .wrapper .header .nav ul li:first-child a:hover{
+        border-top:0;
+    }
+    .wrapper .header .nav ul li a:hover{
+
+        transition: all 0.15s ;
+        padding:0px 15px 0px 25px;
+        border-top:3px solid #99E000;
+
+    }
+    .wrapper .header
+    {
+        overflow:visible;
+    }
+
+
+
+
+
+    /*메뉴버튼*/
+
+    .wrapper .header .nav ul
+    {
+
+        width: 200px;
+        overflow:hidden;
+    }
+    .wrapper .header .nav ul li a
+    {
+
+        width: 200px;
+        line-height:40px;
+
+    }
+
+
+}
+
+@media screen and (max-width:770px){
+
+    .wrapper .logo
+    {
+        position:relative;
+        margin:0 auto;
+        top:10%;
+    }
+    .wrapper .header
+    {
+        min-height: 100px;
+        height:50px;
+        padding:0;
+        background-color:rgba(255,255,255,0.2);
+        box-shadow: none;
+
+    }
+    .wrapper .header .logo-s
+    {
+        height:55px;
+    }
+    .wrapper .header .logo-s a
+    {
+        background-size:cover;
+
+        width: 80px;
+        height: 40px;
+
+        margin-left:35px;
+
+    }
+    .wrapper .header .nav button
+    {
+        font-family:'Oswald', sans-serif;
+        display:block;
+        width: 200px;
+        height: 57px;
+        background-color: #99E000;
+        line-height: 57px;
+        text-align:center;
+        color:white;
+        font-size:14px;
+        border:0;
+
+    }
+    .wrapper .header .nav ul{
+        display:none;
+
+    }
+    .wrapper .header .nav ul li
+    {
+        line-height: 46px;
+        background: rgba(255,255,255,0.2);
+        color:#99E000;
+        height: 46px;
+        font-size:16px;
+
+    }
+    .wrapper .header .nav ul li a{
+        color:#99E000;
+
+    }
+    .wrapper .header .nav ul li a:hover{
+        background: #F2F2F2;
+        box-shadow:inset 5px 0px #99E000;
+        padding:0px 15px 0px 25px;
+        color:#999;
+        border-top:0;
+        width: 100%;
+        height: 46px;
+        line-height: 46px;
+
+    }
+    .wrapper .header
+    {
+        overflow:visible;
+    }
+
+
+
+    /*메뉴버튼*/
+
+    .wrapper .header .nav ul
+    {
+
+        width: 200px;
+        overflow:hidden;
+    }
+    .wrapper .header .nav ul li a
+    {
+
+        width: 200px;
+        line-height:40px;
+
+    }
+
+
+}
+
+@media screen and (max-width:481px){
+    .wrapper
+    {
+
+    }
+    .wrapper .logo
+    {
+        position:relative;
+        margin:0 auto;
+        top:10%;
+    }
+    .wrapper .header
+    {
+        min-height: 40px;
+        width: 100%;
+        height:40px;
+        padding:0;
+        background-color:rgba(255,255,255,0.2);
+        box-shadow: none;
+        position: fixed;
+
+    }
+    .wrapper .header .logo-s
+    {
+        height:55px;
+        -webkit-background-size: 39px 38px;
+        background-size: 39px 38px;
+        background-position: top;
+    }
+    .wrapper .header .logo-s a
+    {
+
+        width: 70px;
+        height: 39px;
+        margin:0;
+
+    }
+    .wrapper .header .nav{
+        width: 150px;
+    }
+    .wrapper .header .nav button
+    {
+        font-family:'Oswald', sans-serif;
+        display:block;
+        width: 150px;
+        height: 41px;
+        line-height: 41px;
+        background-color: #99E000;
+
+        text-align:center;
+        color:white;
+        font-size:14px;
+        border:0;
+
+    }
+
+    .wrapper .header .nav ul{
+        display:none;
+
+    }
+    .wrapper .header .nav ul li
+    {
+        line-height: 40px;
+        background: rgba(255,255,255,0.2);
+        color:#99E000;
+        width: 150px;
+        height: 40px;
+        font-size:16px;
+
+    }
+    .wrapper .header .nav ul li a{
+        color:#99E000;
+
+    }
+    .wrapper .header .nav ul li a:hover{
+        background: #F2F2F2;
+        box-shadow:inset 5px 0px #99E000;
+        padding:0px 15px 0px 25px;
+        color:#999;
+        border-top:0;
+        width: 110px;
+    }
+    .wrapper .header
+    {
+        overflow:visible;
+    }
+
+
+
+    /*메뉴버튼*/
+
+    .wrapper .header .nav ul
+    {
+
+        width: 200px;
+        overflow:hidden;
+    }
+    .wrapper .header .nav ul li a
+    {
+
+        width: 200px;
+        line-height:40px;
+
+    }
+
+    /*푸터*/
+
+    .wrapper footer{
+            position: fixed;
+            bottom:0;
+            width: 100%;
+            height: 37px;
+
+        }
+    .wrapper footer .jyplogo a{
+        background-position: 10% 5%;
+        background-repeat: no-repeat;;
+        -webkit-background-size: 60%;
+        background-size: 60%;
+        left:7%;
+    }
+    .wrapper footer .snsicon{
+        position: relative;
+        displ: block;
+        width: auto;
+        height: 20px;
+        text-align:center;
+        top:7px;
+        right: 7%;
+    }
+    .wrapper footer .snsicon .sb{
+        width: 23px;
+        height: 23px;
+        background-repeat: no-repeat;
+        -webkit-background-size: 90%;
+        background-size: 90%;
+        margin:0 7px 0 0;
+    }
+
+
+
+
+}
