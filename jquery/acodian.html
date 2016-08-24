@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>아코디언메뉴</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            
+        }
+         ul{list-style:none;}
+         
+        .menu{border:1px #F00 solid; width: 130px;margin:0 auto;}
+        .menu li{border:1px #F00 solid;}
+        .menu li div{display:none;}
+        
+    </style>
+    
+    <script type="text/javascript">
+        
+        $(function(){
+            
+            // $('.menu li').click(function(){
+                
+            //     // $('.menu li div').hide(1000);
+            //     // $(this).children('div').show(1000);
+                
+            //     // $('.menu li div').slideUp(1000);
+            //     // $(this).children('div').slideDown(1000);
+                
+            //     $('.menu li div').fadeOut(1000);
+            //     $(this).children('div').fadeIn(1000);
+                  
+            // })
+            
+            
+            
+            // var button = false;
+            
+             $('.menu li').click(function(){
+            
+            
+            // 토글사용안할경우 
+                //  if(!$(this).is('.on')){
+                //      $(this).addClass('on').children('div').show()
+                //  }else if($(this).is('.on')){
+                //       $(this).removeClass('on').children('div').hide()
+                //  }
+            
+            
+              // 토글사용안할경우
+            //   if(button == false){
+            //         $(this).children('div').show()
+            //         button = true
+            //     }else if(button == true){
+            //         $(this).children('div').hide()
+            //         button = false
+            //     }
+               
+               
+                //토글
+                // $(this).children('div').toggle(1000);
+                //   $(this).children('div').slideToggle(1000);
+                //   $(this).children('div').fadeToggle(1000);
+           
+            })
+            
+            
+            
+        })
+        
+        
+    </script>
+    
+    
+</head>
+<body>
+    
+    <div class="menu">
+        <ul>
+            <li>
+                <a href="javascript:void(0);">menu</a>
+                <div>
+                    <img src="img/crab.png" />
+                </div>
+            </li>
+            <li>
+                <a href="javascript:void(0);">menu</a>
+                <div>
+                    <img src="img/duck.png" />
+                </div>
+            </li>
+            <li>
+                <a href="javascript:void(0);">menu</a>
+                <div>
+                    <img src="img/giraffe.png" />
+                </div>
+            </li>
+            <li>
+                <a href="javascript:void(0);">menu</a>
+                <div>
+                    <img src="img/pelican.png" />
+                </div>
+            </li>
+        
+        </ul>
+    </div>
+    
+</body>
+</html>

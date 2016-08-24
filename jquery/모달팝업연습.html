@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <script>
+        
+        $(function(){
+           var openPopup = function(){
+               // console.log("실행중?")
+                 
+                blindFn();
+                popMaker();
+                $('.popup').show(1000);
+              
+            }
+            
+            function popMaker(){
+                var tag = "";
+            
+                tag += '<div class="popup">';
+                tag += '<button class="closebtu">x</button>';
+                tag += '<div class="content">';
+                tag += '</div>';
+                tag += '</div>';
+               
+               $('body').append(tag);
+               centerPosition($('.popup'));
+            }
+            
+            function blindFn(){
+                var bl_Tag = "";
+                 bl_Tag += '<div class="blind"></div>';
+                 
+                 $('body').prepend(bl_Tag);
+                 
+                  $('.blind').css({
+                    position:'absolute',
+                    backgroundColor:'#000',
+                    left:0,
+                    right:0,
+                    top:0,
+                    bottom:0,
+                    display:'none'
+                }).fadeTo(1000,0.5);
+                 
+            }
+            
+            function centerPosition(target){
+                target.css({
+                    left:"50%",
+                    marginLeft:function(){
+                        
+                        var aa = $(this).css('width')
+                        //console.log(aa)
+                        return -parseInt(aa)/2 + 'px';
+                    },
+                    top:"50%",
+                    marginTop:function(){
+                        
+                        var aa = $(this).css('height')
+                        
+                        return -parseInt(aa)/2 + 'px';
+                    },
+                })
+            }
+            
+            
+            
+            
+            var closeEvent = function(){
+                $('.popup').hide(1000);
+               
+               $('.blind').fadeOut(1000,function(){
+                   $(this).remove()
+               })
+            }
+            
+            
+            
+          $('.open').click(openPopup);
+         $('body').on('click','.closebtu',closeEvent);
+        })
+    </script>
+    
+    <style type="text/css">
+       
+        .popup{
+            width: 500px;height: 500px;border:1px #F00 solid;
+            background-color: #fff;
+            position:absolute;
+            top:0;
+            left:0;
+            z-index:1;
+            display:none;
+        }
+       
+    </style>
+</head>
+<body>
+    
+    <button class="open">눌러</button>
+    
+    
+</body>
+</html>

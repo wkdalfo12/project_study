@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link rel="stylesheet" href="../../../../font2/font/flaticon.css" type="text/css" />
     
     <!--mata name 이 부분 넣어준 이유 : 핸드폰으로 사이트만든거 봤을때 핸드폰에 맞게 사이즈들어가는?. -->
     
@@ -100,7 +101,50 @@
                 transform:rotateY(180deg);
             }
             
-           @media screen and (max-width:720px){
+          
+           
+        
+           
+            .wrapper .footer{
+                width: 100%;
+                height: 57px; 
+               
+                position:fixed;bottom:0;
+                background-color: rgba(0,0,0,0.5);
+            }
+           .wrapper .footer .footer_2{
+              height: 57px;
+             
+               padding:0 100px;
+           }
+           
+          .wrapper .footer .footer_2 .footer_2_left{
+              float:left; 
+          }
+           .footer_2_left img{
+                position:absolute;
+                bottom:5px;
+             }
+             
+           .wrapper .footer .footer_2 .footer_2_right{
+               float:right; font-size:30px; 
+                
+              
+           }
+            
+           
+            .wrapper .footer .footer_2 .footer_2_right span::before{
+                display:inline-block;
+                vertical-align:middle;line-height:30px;
+                background-color: #e4e4e4;
+                border-radius:20%;
+                width: 30px;height: 30px;
+                text-align:center; 
+                margin:0;
+               
+            }
+            
+             @media screen and (max-width:720px){
                .wrapper{
                    background-image: url(../../../../img/9k.jpg);
                    background-position: center top;
@@ -164,10 +208,25 @@
             .wrapper .header .mark a:hover{
                 transform:scale(0.6,0.6) rotateY(180deg);
             }
+        
+             .wrapper .footer .footer_2 .footer_2_left img{
+                 width: 80px;
+                 display: inline-block;
+                 margin-bottom:8px;
+                
+             }
+             
+              .wrapper .footer .footer_2 .footer_2_right span::before {
+                  display: inline-block;
+                  width: 25px;
+                  height: 25px;
+                 font-size:15px;
+                 margin-top:7px;
+             }
+        
            }
-        
-        
-        
+          
+           
         </style>
 </head>
 <body>
@@ -188,11 +247,25 @@
                         <li><a href="">NOTICE</a></li>
                         <li><a href="">SCHEDULE</a></li>
                     </ul>
+                      
                 </div>
+                    <div class="footer">
+                        <div class="footer_2">
+                            <div class="footer_2_left"><img src="../../../../img/jyplogo.png" alt=""></div>
+                            <div class="footer_2_right">
+                                <span class="flaticon-twitter-logo-silhouette"></span>
+                                <span class="flaticon-facebook-social-symbol"></span>
+                                <span class="flaticon-youtube-logo"></span>
+                            </div>
+                        </div>
+                    </div>
+
             </div>
             
             <div class="logo"></div>
             
-            </div>
+             
+        </div>
+            
 </body>
 </html>

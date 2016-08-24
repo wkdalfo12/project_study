@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        ul{margin: 0;padding: 0;list-style:none;}
+        .view{margin:0 auto;width: 560px;}
+        .list{text-align:center;}
+        .list li{width: 150px; display:inline-block;}
+        .list li img{width: 100%;}
+        
+    </style>
+    
+    <script>
+        $(function(){
+          
+          $('.list li a').click(function(){
+              
+              var url = $(this).attr('href');
+              var location = 'https://www.youtube.com/embed/'+url+'?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen'
+              
+             
+              $('.view iframe').attr('src',location);
+              
+              return false;
+          })
+            
+        })
+        
+    </script>
+</head>
+<body>
+ <div class="view">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/rJi0wNooA2Q?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+ </div>
+ 
+ <ul class="list">
+        <li><a href="rJi0wNooA2Q"><img src="img/jus.png" alt=""></a></li>
+        <li><a href="MOuzcBERbsc"><img src="img/loco.png" alt=""></a></li>
+        <li><a href="ewjucLierFc"><img src="img/zico.png" alt=""></a></li>
+        <li><a href="Vfoq_IfbB_M"><img src="img/mad.png" alt=""></a></li>
+        <li><a href="tqmLPTEzPsw"><img src="img/song.png" alt=""></a></li>         
+ </ul>
+ 
+</body>
+</html>

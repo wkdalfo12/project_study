@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <script type="text/javascript">
+        
+        function reset(){
+            
+            var shape = ["하트","다이아","클로버","스페이스"];
+            var aa = [];
+            
+            for(i=0; i<shape.length; i++){
+                for(j=1; j<13+1; j++){
+                    aa.push(shape[i]+j);
+                    
+                }
+            }
+            
+            console.log(aa);
+        }
+        
+        
+    </script>
+    
+    
+    
+</head>
+<body>
+    <button onclick="reset();">카드정리</button>
+</body>
+</html>

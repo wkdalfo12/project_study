@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
+    <script>
+        
+        var worldCtrl = function($scope){
+            
+            $scope.pupulation = 7000;
+            $scope.countries = [
+                    {"name":"한국","pupulation":7000},
+                    {"name":"일본","pupulation":12000},
+                    {"name":"중국","pupulation":130000},
+                    {"name":"인도","pupulation":120000},
+                    {"name":"호주","pupulation":2200}
+                ]
+            
+        }
+        
+    </script>
+
+</head>
+<body ng-app>
+    
+    <div ng-controller="worldCtrl">
+        
+        <ul ng-repeat="country in countries">
+            <li>
+                나라:{{country.name}}, 의 인구는 {{country.pupulation}} 만 인구이다
+            </li>
+            
+        </ul>
+        
+        <p>아시아의 인구는 {{pupulation}}만 인구이다.</p>
+    </div>
+    
+</body>
+</html>

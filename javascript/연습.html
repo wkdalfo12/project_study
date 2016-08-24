@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+     <script type="text/javascript">
+         
+            
+            /* 홀짝을 하는데
+            홀일때 가위바위보 실행
+            짝일때 업앤다운 */
+            
+          var random = Math.floor(Math.random() * 100)  
+          var rcp = ["가위","바위","보"];
+          
+          
+       
+          
+          var aa = {
+                  test:function(){
+                      if(random % 2 == 1){
+                         return '홀';
+                         
+                      }else if(random % 2 == 0){
+                         return '짝';
+                      }
+                  },
+                  
+                  dd:prompt('홀 또는 짝을 입력하시오'),
+                  
+                  ee:function(){
+                      if(this.test() == this.dd){
+                          alert('정답!');
+                      }else if(this.dd == "홀" || this.dd == "짝"){
+                          alert('오답!');
+                      }else{
+                          alert('올바른값을입력하시오'); 
+                              }
+                             },
+                 
+                  game:function(){
+                     
+                      if(random % 2 === 1){
+                           ff:alert("가위바위보 게임을시작합니다.");
+                           alert(rcp[Math.floor(Math.random()* rcp.length)]);
+                      }
+                  },
+                  
+                  updown:function(){
+                      if(random % 2 === 0){
+                           alert("업&다운 게임을 시작합니다.");
+                           ii:prompt("1~100까지의 숫자 중 하나를 입력하세요.");
+                           
+                      }
+                  },
+                  
+                  uppdown:function(){
+                      if(this.updown().ii > random && this.updown().ii <= 100){
+                          alert("다운");
+                         
+                      }else if(this.updown().ii < random && this.updown().ii <= 100){
+                          alert("업");
+                         
+                      }else if(this.updown().ii == random){
+                          alert("맞았어 정답!");
+                      }
+                  }
+              
+          }
+               
+            console.log(random);
+            console.log(aa.ee());
+            console.log(aa.game());
+            console.log(aa.updown());
+            console.log(aa.uppdown());
+           
+            
+         
+     </script>   
+    
+
+    
+    
+    
+</head>
+<body>
+    
+</body>
+</html>

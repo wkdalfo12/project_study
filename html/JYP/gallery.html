@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="gallery.css" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+     <script type="text/javascript" src="js/gal.js"></script>
+    <title>JYP</title>
+      <style type="text/css">
+          
+      </style>
+      <script type="text/javascript">
+          
+          
+        //   $(function(){
+        //       $('.top_right button').click(function(){
+                  
+                  
+        //         //   $('.top_right li').css({'margin':0}).toggle(1000);
+        //         //   $('.top_right li').fadeOut().css({'display':'block'});           하연언니가한거ㅋㅋㅋㅋㅋㅋㅋ 
+                 
+                
+        //         if(!$('.top_right li').is('.on')){
+        //             $('.top_right li').addClass('on').css({'margin':0}).show(1000);
+        //         }else{
+        //              $('.top_right li').removeClass('on').css({'margin':0}).hide(1000);
+        //         }
+                
+        //       })    
+        //   })
+          
+          
+          $(function(){
+              $('.top_right button').click(function(){
+                  
+              $('.top_right li').toggle();
+              })    
+          })
+          
+           var aa = true;
+          
+          $(window).resize(function(){
+                  if( $(window).width() < 720 && aa){
+                      
+                      $('.top_right li').css({'display':'none'})
+                      aa = false;
+                     
+                      
+                  }else if($(window).width() > 720 && !aa){
+                      
+                      $('.top_right li').css({'display':'inline-block'})
+                       aa = true;
+                    }
+                
+              })
+          
+          
+      </script>
+</head>
+<body>
+    
+    <div class="wrapper">
+          <div class="top">
+             <div class="top_left"><a href="https://projeck-study-mirae-me.c9users.io/html/JYP/jyp.html"></a></div>
+                    
+                        <ul class="top_right">
+                             <button>Main Menu</button>
+                             <li><a href="https://projeck-study-mirae-me.c9users.io/html/JYP/profile.html">PROFILE</a></li>
+                             <li><a href="https://projeck-study-mirae-me.c9users.io/html/JYP/discography.html">DISCOGRAPHY</a></li>
+                             <li><a href="https://projeck-study-mirae-me.c9users.io/html/JYP/gallery.html">GALLERY</a></li>
+                             <li><a href="https://projeck-study-mirae-me.c9users.io/html/JYP/video.html">VIDEO</a></li>
+                             <li><a href="https://projeck-study-mirae-me.c9users.io/html/JYP/notice.html">NOTICE</a></li>
+                             <li><a href="https://projeck-study-mirae-me.c9users.io/html/JYP/schedule.html">SCHEDULE</a></li>
+                        </ul>
+                    </div>
+          <section>
+              <div class="sect">
+                  <div id="sect-title">GALLERY</div>
+                  <div id="sect-main">
+                          <div class="fullbox">
+                              <div class="photos">
+                                 <ul class="clearfix">
+                                     <li>
+                                         <a href=""><img src="jypimg/g_1.jpg" alt="1번이미지"></a>
+                                     </li>
+                                     <li>
+                                         <a href=""><img src="jypimg/g_2.jpg" alt="2번이미지"></a>
+                                     </li>
+                                     <li>
+                                         <a href=""><img src="jypimg/g_3.jpg" alt="3번이미지"></a>
+                                     </li>
+                                     <li>
+                                         <a href=""><img src="jypimg/g_4.jpg" alt="4번이미지"></a>
+                                     </li>
+                                     <li>
+                                         <a href=""><img src="jypimg/g_5.jpg" alt="5번이미지"></a>
+                                     </li>
+                                     <li>
+                                         <a href=""><img src="jypimg/g_6.jpg" alt="6번이미지"></a>
+                                     </li>
+                                     <li>
+                                         <a href=""><img src="jypimg/g_7.jpg" alt="7번이미지"></a> 
+                                     </li>
+                                     <li>
+                                         <a href=""><img src="jypimg/g_8.jpg" alt="8번이미지"></a>
+                                     </li>
+                                      <li>
+                                         <a href=""><img src="jypimg/g_9.jpg" alt="9번이미지"></a>
+                                     </li>
+                                      <li>
+                                         <a href=""><img src="jypimg/g_10.jpg" alt="10번이미지"></a>
+                                     </li>
+                                 </ul>
+                                 
+                             <!--디스플레이none-->
+                             
+                            
+                                 <div class="disnone">
+                                   <div class="bb">
+                                        <p>
+                                            <img style="margin-left:0" src="jypimg/gg1.jpg" alt="큰이미지1">
+                                            <a href="javascript:void(0)" class="btn"></a>
+                                         </p>
+                                        <p>
+                                            <img src="jypimg/gg2.jpg"  alt="큰이미지2">
+                                            <a href="javascript:void(0)" class="btn"></a>
+                                        </p>
+                                        <p>
+                                            <img style="margin-left:0" src="jypimg/gg_3.jpg" alt="큰이미지3">
+                                            <a href="javascript:void(0)" class="btn"></a>
+                                        </p>
+                                        <p>
+                                            <img style="margin-left:0" src="jypimg/gg4.jpg" alt="큰이미지4">
+                                            <a href="javascript:void(0)" class="btn"></a>
+                                        </p>
+                                        <p>
+                                            <img src="jypimg/gg5.jpg" alt="큰이미지5">
+                                            <a href="javascript:void(0)" class="btn"></a>
+                                        </p>
+                                        <p>
+                                            <img style="margin-left:0" src="jypimg/gg6.jpg" alt="큰이미지6">
+                                            <a href="javascript:void(0)" class="btn"></a>
+                                        </p>
+                                        <p>
+                                            <img src="jypimg/gg7.jpg" alt="큰이미지7">
+                                            <a href="javascript:void(0)" class="btn"></a>
+                                        </p>
+                                        <p>
+                                            <img src="jypimg/gg8.jpg" alt="큰이미지8">
+                                            <a href="javascript:void(0)" class="btn"></a>
+                                        </p>
+                                        <p>
+                                            <img src="jypimg/gg9.jpg" alt="큰이미지9">
+                                            <a href="javascript:void(0)" class="btn"></a>
+                                        </p>
+                                        <p>
+                                            <img src="jypimg/gg10.jpg" alt="큰이미지10">
+                                            <a href="javascript:void(0)" class="btn"></a>
+                                        </p>
+                                    </div>
+                                 </div>
+                          
+                                 
+                              </div>
+                              <div id="list-nav">
+                                      <ul>
+                                          <li>
+                                              <a href="">1</a>
+                                          </li>
+                                      </ul>
+                              </div>
+                              
+                          </div>
+                  </div>
+                  <div class="aa"></div>
+               </div>
+             
+          </section>
+          <footer>
+                <div class="jyplogo">
+                    <a href="http://www.jype.com/" target="_blank">JYP Entertainment</a>
+                </div>
+                <div class="snsicon">
+                    <a href="https://twitter.com/GOT7Official" target="_blank" class="sb twitter"></a>
+                    <a href="https://www.facebook.com/GOT7Official" target="_blank" class="sb facebook"></a>
+                    <a href="https://www.youtube.com/user/JJprojectOfficial" target="_blank" class="sb youtube"></a>
+                </div>
+           </footer>
+    </div>
+   
+</body>
+</html>

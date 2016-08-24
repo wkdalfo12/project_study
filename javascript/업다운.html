@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+     
+     <script type="text/javascript">
+     
+        var coin = 5; 
+        var random = Math.random() * 100;
+        var x = Math.floor(random);
+     
+        
+        
+        for (i=1; i<coin+1; i++){
+             
+              var ran = prompt("0~100의 수 중 아무거나 입력하시오.")
+              console.log(x);
+             
+             if(ran > x && ran>=0 && ran <= 100){
+                     alert("낮다");
+                     console.log(ran); 
+             }else if(ran < x && ran>=0 && ran <= 100){
+                     alert("높다");
+                     console.log(ran);
+             }else if(ran == x ){
+                    alert("정답!");
+                    console.log(ran);
+                    break;
+             }else{
+                    alert("똑바로써라");
+                    console.log(ran);
+             }
+             
+         
+        }
+       
+       
+       
+       
+       
+        
+      
+         
+     </script>
+    
+</head>
+<body>
+    
+</body>
+</html>

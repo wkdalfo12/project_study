@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style type="text/css">
+      html,body{height: 100%;}
+        *{margin: 0;padding: 0;}
+        ul{list-style:none;}
+        .nav{height: 40px; background-color: #000; text-align:center;width: 100%;position:fixed;}
+        .nav li { display:inline-block;}
+        .nav a{color:#FFF; text-decoration:none; line-height:40px; font-size:20px;}
+        .section,.section div {height: 100%; -webkit-background-size: cover;
+        background-size: cover;}
+        .section>div:nth-child(1){background: #000;}
+        .section>div:nth-child(2){background: #0F0;}
+        .section>div:nth-child(3){background: #00F;}
+        .section>div:nth-child(4){background: #F00;}
+        .section>div:nth-child(5){background: #F0F;}
+        
+        
+    </style>
+    <script>
+        //첫번째 방법
+        // $(function(){
+            
+        //   $('.nav a').click(function(){
+               
+        //       var target = $(this).attr('href');
+               
+        //       $('body,html').animate({
+        //           scrollTop:$(target).offset().top
+        //       })
+        //       return false;
+        //   })
+            
+        // })
+        
+        // 두번째방법
+         //   var didx;
+         
+        //     $('.nav li a').click(function(){
+                
+        //         var aindx = $(this).parent().index()
+                
+        //         didx = $('.section div:eq(' +aindx+')').offset().top
+                
+        //         console.log(didx)
+                
+        //         $('body,html').animate({
+                    
+        //             scrollTop : didx
+                    
+        //             })
+                
+        //     })
+        
+        
+        
+        
+        
+    </script>
+    
+    
+    
+    
+</head>
+<body>
+    
+     <div class="nav">
+        <ul>
+            <li><a href="javascript:void(0);">text</a></li>
+            <li><a href="javascript:void(0);">text</a></li>
+            <li><a href="javascript:void(0);">text</a></li>
+            <li><a href="javascript:void(0);">text</a></li>
+            <li><a href="javascript:void(0);">text</a></li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    
+    
+    
+</body>
+</html>

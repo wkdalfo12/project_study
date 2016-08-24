@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>시계</title>
+       
+       <script type="text/javascript">
+           
+           
+           var days = ['일','월','화','수','목','금','토']
+           
+ 
+           function playtime(){
+               
+                var times = new Date;
+                var date = times.getDate();          //컴퓨터 상의 오늘날짜
+                var day = times.getDay();            //요일(0=일요일)
+                var year = times.getFullYear();      //연도
+                var hours = times.getHours();        //0~24시
+                var Month = times.getMonth()+1;      // 월 (Month가 0부터 시작하니까 +1함)
+                var min = times.getMinutes();        // 분 
+                var seconds = times.getSeconds();    // 초 
+
+               
+              document.getElementById('time').innerHTML = date + '일' + days[day] + year +"년" + Month + "월" + hours + '시' + min + '분' + seconds + "초"
+                   }
+           setInterval(playtime,1000)
+           
+           
+           
+           
+       </script>
+    
+    
+    
+    
+</head>
+<body>
+    <div Id="time"></div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        
+       
+    
+        //console.log(obj.team1[0].userName)
+        // console.log(obj.team2[1].userName)
+        
+        $(function(){
+              $.getJSON('class.json',function(data){
+                  
+                   var table_element = "";
+                    table_element += "<table>"
+                    
+                    // console.log("each / obj")
+                    $.each(data.team1,function(i,e){
+                        // console.log(e[0])
+                      table_element += "<tr>"
+                      
+                      $.each(e,function(j,f){
+                            table_element += "<td>"
+                            table_element += f
+                            table_element += "</td>"
+                          
+                      })
+                      
+                      table_element += "</tr>"
+                    
+                    })
+                    table_element += "</table>"
+                    $('.table').html(table_element)
+                  
+              })
+            // console.log("forin / obj")
+            // for(var i = 0 in obj){
+            //     console.log(obj[i])
+            // }
+           
+         
+            // console.log("for")
+            // for(i=0; i < obj.team1.length; i++){                // 각 팀1개씩 밖에 못봄 전부보려면 다른사전작업이필요
+            //     console.log(obj.team1[i].userName)
+            // }
+            
+            // console.log('each')
+            //  $.each(obj.team1,function(i,e){
+            //   console.log(e.userName)
+            // })
+            
+            
+            
+            
+            
+        //   $.each(obj,function(i,e){
+        //       //console.log(e)
+               
+        //      console.log(e[0].userName)
+             
+        //   })
+            
+        })    
+        
+        
+        
+    </script>
+    <style type="text/css">
+        .table table{border:1px #F00 solid;width: 100%;}
+        .table tr,
+        .table td{border:1px #F00 solid;}
+    </style>
+    
+</head>
+<body>
+      <div class="table"></div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+    
+       var wrapH = 0;
+       var spot = [];
+        
+      $(window).load(function(){
+             
+            $('.wrap div').each(function(i,e){
+                
+                spot.push($(e).offset().top)        //div의 오프셋 탑값을 spot에게 푸쉬
+                $(e).css('top',spot[i]);            // div에게 css로 top값을 div의 오프셋탑값으로줌
+                wrapH += $(e).height()              // wrapH에게 div의헤이트값을 더한후 대입
+            });
+             
+            
+            $('.wrap').height(wrapH);        //wrap의 헤이트(더한후 대입한 div의 헤이트값)
+            $('.wrap div').css({
+                'position':'fixed'                 //div에게 픽스드 주어서 고정
+            })
+            
+            $(window).scroll(function(){        //윈도우에게 스크롤 함수를 줌
+                var sct = $(this).scrollTop()     // 윈도우의 스크롤 탑값을 뽑아냄
+              
+               $('.wrap div').each(function(i,e){    //  div 각각에게
+                   var tt = spot[i] - sct           // div 각각의 오프셋 탑값 - 윈도우의 스크롤 탑값 = 변수 tt 
+                   
+                   if(spot[i] < sct) tt *= 0.5      //만약 div 각각의 오프셋 탑값 보다 윈도우의 스크롤 탑값이 더 크면 
+                                                   // tt에 50% 곱한후대입
+                  $(e).css({                               
+                      top: tt                        //div에게 css로 top값을 tt만큼 부여
+                  })
+              })
+              
+                
+            })
+           
+      })
+ 
+    </script>
+    
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        html,body{height: 100%;}
+        .wrap{height: 100%;width: 100%;}
+        .wrap div{height: 100%;border:1px #F00 solid;-webkit-background-size: cover;
+        background-size: cover;width: 100%;}
+        .wrap div.section1{background-image: url(img/gray.jpg);}
+        .wrap div.section2{background-image: url(img/gray2.png);}
+        .wrap div.section3{background-image: url(img/gray3.png);}          
+        .wrap div.section4{background-image: url(img/gray4.jpg);}
+    </style>
+
+</head>
+<body>
+    <div class="wrap">
+        <div class="section1"></div>
+        <div class="section2"></div>
+        <div class="section3"></div>
+        <div class="section4"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        
+        $(function(){
+            
+            var secondsArr = [];
+            var hoursArr = [];
+            var minutesArr = [];
+            
+            setInterval(function(){
+                
+                    var time = new Date();
+                 
+                    var hours =time.getHours();
+                    var minutes = time.getMinutes();
+                    var seconds = time.getSeconds();
+                    
+                    
+                    //if문하려면 여기서부터 시작하면됨
+                    // if(hours > 12){
+                    //       hours = hours-12
+                    // }
+                    seconds = arrPush(seconds,secondsArr)
+                    hours = arrPush(hours,hoursArr)
+                    minutes = arrPush(minutes,minutesArr)
+                    console.log(seconds)
+                    
+                  
+                    timeprint(hours,$('.hours'));
+                  
+                    timeprint(minutes,$('.minutes'));
+                    timeprint(seconds,$('.seconds'));
+                    bgc(hours)
+                   // var timePrint = hours%12 +":"+ minutes+":"+seconds
+            
+                //  $('.time').text(timePrint);
+            },1000);
+            
+           
+            
+            
+             //담은 배열을 각각의 스판들에게 출력해라
+            // function timeprint(aa,bb,cc){
+                
+            //     $('.seconds').children('span').eq(0).text(aa[0])
+            //     $('.seconds').children('span').eq(1).text(aa[1])
+               
+                 
+            // }
+       
+             function timeprint(time,target){
+                 target.children('span').each(function(i,e){
+                    // $(e).text(time[i])    이미지넣기전에사용한거
+                    var num = -1*(Number(time[i]*100)) + 'px';
+                    
+                    $(e).animate({
+                        'background-position-Y':num,
+                        //'background-position':'0 '+num
+                        
+                    })
+                
+                 })
+             }
+       
+            function bgc(hours){
+                 if(6 < hours[0]+hours[1] && hours[0]+hours[1] < 14){
+                       $('body').css({
+                           'background-color':'red'
+                       })
+                        
+                    }else{
+                        $('body').css({
+                             'background-color':'#0a15ab'
+                        })
+                    }
+                    
+                 }
+            
+       
+       
+       
+             // 시간 배열 담은 결과 반환 
+             function arrPush(time,arr){
+                 arr = [];
+                 time = String(time);
+                 
+                 if(time < 10){
+                     time = "0"+time;
+                     
+                 }
+                 
+                 for(i=0; i < time.length; i++){
+                       arr.push(time.substring(i,i+1))
+                       
+                 }
+                 
+                 return arr
+             }       
+            
+        })
+       
+        
+    </script>
+    
+    <style type="text/css">
+        body{background-color:black;color:#FFF;}
+        body div div{display:inline-block;} 
+        body span{
+          
+            display:inline-block;
+            border:1px #F00 solid;
+            width: 42px;
+            height: 60px;
+            background-image: url(img/txt-num.png);
+            text-indent:-9999px;
+            background-repeat:no-repeat;
+        }
+        
+    </style>
+    
+</head>
+<body>
+    <div class="time" style="font-size:30px;">
+        <div class="hours"> 
+            <span></span>
+            <span></span>
+        </div>
+         <div class="minutes">
+            <span></span>
+            <span></span>
+        </div>
+         <div class="seconds">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</body>
+</html>
+
+

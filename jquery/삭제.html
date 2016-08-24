@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 모달팝업 연습</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+            
+          //  console.log("실행실행")
+         var openPopup = function (){
+              var id = $(this).attr('id');
+              //console.log(id)
+              
+              blindFn();
+              popMaker(id);
+              $('.popup').show(1000);
+              
+          }
+          
+             function blindFn(){
+                 var bl_Tag = "";
+                 bl_Tag += '<div class="blind"></div>';
+                 $('body').prepend(bl_Tag);
+                 
+                 $('.blind').css({
+                    position:'absolute',
+                    backgroundColor:'#000',
+                    left:0,
+                    right:0,
+                    top:0,
+                    bottom:0,
+                    display:'none'
+                }).fadeTo(1000,0.5);
+                
+             }
+            
+            function popMaker(id){
+                var contents = $('.'+id).html();
+                console.log(contents)
+                var tag = "";
+                
+                
+                tag += '<div class="popup '+id+'">';
+                tag += '<button class="closebtn">닫기</button>';
+                tag += '<div class="content">';
+                tag += contents;
+                tag += '</div>';
+                tag += '</div>';
+                
+                $('body').append(tag);
+                centerPosition($('.popup'));
+                
+            }
+            function centerPosition(target){
+                target.css({
+                    left:"50%",
+                    marginLeft:function(){
+                        var aa = $(this).width();
+                     
+                        
+                        return -parseInt(aa)/2 + 'px';
+                    },
+                    top:"50%",
+                    marginTop:function(){
+                        var aa = $(this).height();
+                        
+                         return -parseInt(aa)/2 + 'px';
+                    },
+                })
+            }
+            
+            var closeEvent = function(){
+                $('.popup').hide(1000,function(){
+                    $(this).remove()
+                })
+                $('.blind').fadeOut(1000,function(){
+                    $(this).remove()
+                })
+            }
+            
+            $('.open').click(openPopup);
+            $('body').on('click','.closebtn',closeEvent);
+            
+        })
+        
+    </script>
+    
+    <style type="text/css">
+        .popup{
+            position:absolute;
+            top:0;
+            left:0;
+            width: 500px;
+            height: 500px;
+            background-color: #FFF;
+            display:none;
+           
+            
+        }
+        #pop2{color:#F00;border:rgba(225,225,225,0.5);font-size:30px;background-color: #00F;}
+        .pop1{display:none; color:#0F0;font-size:3em;}
+        .pop2{display:none;color:#000;font-size:1.5em;}
+        .pop2 img{width: 450px;}
+        .pop3{display:none;color:#000;font-size:4em;}
+        .pop4{display:none;color:#000;font-size:3em;}
+        
+        
+        
+    </style>
+</head>
+<body>
+    <button class="open" id="pop1">누르지마</button>
+    <button class="open" id="pop2">박하연만눌러봐라</button>
+    <button class="open" id="pop3">누르지마</button>
+    <button class="open" id="pop4">누르지마</button>
+    
+    <div class="pop1">안녕 박하연씨 생일너무축하합니다 사랑해욘</div>
+    <div class="pop2">
+        <span>안녕 박하연씨 생일너무축하합니다 사랑해욘</span>
+        <img src="img/gray.jpg">
+        </div>
+    <div class="pop3">안녕 박하연씨 생일너무축하합니다 사랑해욘</div> 
+    <div class="pop4">안녕 박하연씨 생일너무축하합니다 사랑해욘</div>
+</body>
+</html>

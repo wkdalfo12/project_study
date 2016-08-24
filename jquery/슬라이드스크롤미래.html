@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <script>
+        $(function(){
+            
+            
+            $('.slide ul').css({
+                width:function(){
+                    var target = $('.slide ul li');
+                    return target.width() * target.size();
+                }
+            })
+            
+            
+            idx = 0
+          
+            $('.btn').click(function(){
+                var target = $('.slide ul li');
+                var viewThumb = 5;
+                var aa = target.width() * viewThumb;
+                var count = target.length / 5
+               idx ++
+               
+               if(idx >= count){
+                 idx = count-1
+                   return
+                   
+               }else{
+                   $('.slide ul').animate({
+                       right:'+='+aa+'px'
+                   })
+               }
+              
+            })
+            
+            $('.btnR').click(function(){
+                var target = $('.slide ul li');
+                var viewThumb = 5;
+                var aa = target.width() * viewThumb;
+                 var count = 0
+                
+                idx--
+                
+                if(idx < count){
+                 idx = 0
+                   return
+               }else{
+                   $('.slide ul').animate({
+                       right:'-='+aa+'px'
+                   })
+               }
+                
+            })
+            
+            $('.slide ul li a').click(function(){
+   
+                var url = $(this).attr('href');
+                console.log(url)
+                
+                $('.view img').attr('src',url);
+                $('.view img').css({
+                    'width':'500px'
+                })
+                return false;
+            
+            })
+
+            
+        })
+    </script>
+    
+    <style type="text/css">
+        
+        .btnR{float:right;}
+        .view {width: 500px;margin:0 auto;}
+        .slide{width: 500px;background: #CCC;margin:0 auto;}
+        ul{list-style:none;position:relative;height: 100px;width: 500px;border:1px #F00 solid;margin: 0;padding: 0;}
+        ul li{width: 100px;height: 100px;outline:1px #F00 solid;float:left;}
+       
+        ul li img{width: 100px;height: 100px;}
+       
+        
+    </style>
+</head>
+<body>
+    
+    <button class="btn">왼쪽</button>
+    <button class="btnR">오른쪽</button>
+    
+    <div class="view">
+        <img src="img/adidas.png" alt="">
+    </div>
+    <div class="slide">
+        <ul>
+            <li><a href="img/adidas.png"><img src="img/adidas.png" alt=""/></a></li>      
+            <li><a href="img/gray.jpg"><img src="img/gray.jpg" alt=""/></a></li> 
+            <li><a href="img/gray2.png"><img src="img/gray2.png" alt=""/></a></li>      
+            <li><a href="img/gray3.png"><img src="img/gray3.png" alt=""/></a></li> 
+            <li><a href="img/gray4.jpg"><img src="img/gray4.jpg" alt=""/></a></li>      
+            <li><a href="img/adidas.png"><img src="img/adidas.png" alt=""/></a></li> 
+            <li><a href="img/loco.png"><img src="img/loco.png" alt=""/></a></li>      
+            <li><a href="img/mad.png"><img src="img/mad.png" alt=""/></a></li> 
+            <li><a href="img/adidas.png"><img src="img/adidas.png" alt=""/></a></li>      
+            <li><a href="img/nike.png"><img src="img/nike.png" alt=""/></a></li> 
+            <li><a href="img/adidas.png"><img src="img/adidas.png" alt=""/></a></li>      
+            <li><a href="img/song.png"><img src="img/song.png" alt=""/></a></li> 
+            <li><a href="img/adidas.png"><img src="img/adidas.png" alt=""/></a></li>      
+            <li><a href="img/zico.png"><img src="img/zico.png" alt=""/></a></li> 
+            <li><a href="img/adidas.png"><img src="img/adidas.png" alt=""/></a></li> 
+        </ul>
+    </div>
+   
+</body>
+</html>

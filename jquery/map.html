@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        #map{width: 800px;height: 350px;}
+    </style>
+</head>
+<body>
+    
+    <div id="map"></div>
+   
+    <button onclick="map(37.6399239,127.0377052,'미래네')">우리집</button>
+    <button onclick="map(37.576026,126.9768428,'화장실')">화장실</button>
+    <button onclick="map(37.6368345,127.0339867,'정문')">정문</button>
+    <button onclick="map(37.571031,127.0092309,'강쥐집')">강쥐집</button>
+    
+    
+    <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=41dc5018d35e7a9e5823afc893fc1d22"></script>
+    <script type="text/javascript">
+    
+        map(37.6399239,127.0377052,'미래네');
+        map(37.6399239,127.0377052,'화장실');
+        map(37.6399239,127.0377052,'정문');
+        map(37.6399239,127.0377052,'강쥐집');
+           
+         
+        function map(x,y,message){
+            // $('#map *').remove();                //맵에 있는애들전부를 리무브해줌(지도가계속추가되지않기위하여)
+            
+        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+        mapOption = { 
+        center: new daum.maps.LatLng(x,y), // 지도의 중심좌표 / 왼쪽숫자 : 위도 / 오른쪽 : 경도 우리나라는 보통 126~128
+        level: 3 // 지도의 확대 레벨
+        };
+        
+        // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+        var map = new daum.maps.Map(mapContainer, mapOption); 
+                
+                
+         // 마커가 표시될 위치입니다 
+        var markerPosition  = new daum.maps.LatLng(x,y); 
+        
+        // 마커를 생성합니다
+        var marker = new daum.maps.Marker({
+            position: markerPosition
+        });
+        
+        // 마커가 지도 위에 표시되도록 설정합니다
+        marker.setMap(map);
+        
+        // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
+        // marker.setMap(null);    
+        
+        
+          
+            var iwContent = '<div style="padding:5px;">'+message+' <br><a href="http://map.daum.net/link/map/Hello World!,x,y" style="color:blue" target="_blank">우리집찾기</a> <a href="http://map.daum.net/link/to/Hello World!,x,y" style="color:blue" target="_blank">길찾기</a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+            iwPosition = new daum.maps.LatLng(x, y); //인포윈도우 표시 위치입니다
+        
+            // 인포윈도우를 생성합니다
+            var infowindow = new daum.maps.InfoWindow({
+                position : iwPosition, 
+                content : iwContent 
+            });
+              
+            // 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
+            infowindow.open(map, marker); 
+                
+        
+        }
+    </script>
+    
+</body>
+</html>

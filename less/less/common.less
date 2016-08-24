@@ -1,0 +1,27 @@
+body{font-family: '돋움',sans-serif;}
+
+@border: 3px;
+@height:40px;
+@fontsize:2em;
+
+
+.primary(@size:10px, @color:#000){
+    border:3px #F00 solid;
+    height: 20px;
+    margin: @size;
+    color:@color;
+    
+}
+
+
+
+
+
+.btn-primary{
+    .primary(8px,#0F0);
+     &:hover {
+       
+        font-size:@fontsize;
+    }
+    
+}

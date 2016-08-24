@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+    $(function(){
+        
+        var hoursArr = [];
+        var minutesArr = [];
+        var secondsArr = [];
+        
+        
+        setInterval(function(){
+            var time = new Date();
+            
+            var hours = time.getHours();
+            var minutes = time.getMinutes();
+            var seconds = time.getSeconds();
+            
+            
+            bgc(hours);
+            hours = arrPush(hours,hoursArr);
+            minutes = arrPush(minutes,minutesArr);
+            seconds =arrPush(seconds,secondsArr);
+                
+           // console.log(hours,minutes,seconds)
+           // console.log(hours,minutes,seconds)
+           timeprint(hours,$('.hours'))
+           timeprint(minutes,$('.minutes'))
+           timeprint(seconds,$('.seconds'))
+          
+           
+        },1000)
+        
+        function timeprint(time,target){
+            target.children('span').each(function(i,e){
+               var num = -1*(Number(time[i]*100)) + 'px';
+               
+               $(e).animate({
+                   'background-position-Y':num,
+               })
+                
+            })
+        }
+        
+        function bgc(hours){
+            if(6 < hours && hours < 14){
+                $('body').css({
+                    'background-color':'red'
+                })
+            }else{
+                $('body').css({
+                    'background-color':'blue'
+                })
+            }
+        }
+        
+        
+        function arrPush(time,arr){
+            arr = [];
+            time = String(time);
+            
+            if(time < 10){
+                time = "0"+time;
+            }
+            
+            for(i=0; i < time.length; i++){
+                arr.push(time.substring(i,i+1))
+              
+            }
+            
+            return arr
+           
+        }
+        
+        
+    })
+        
+    </script>
+   <style type="text/css">
+       body{background-color:#000;color:#FFF;}
+       body div div{display:inline-block;}
+       body span{
+           display:inline-block;
+           border:1px #F00 solid;
+           width: 42px;
+           height: 60px;
+           background-image: url(img/txt-num.png);
+           text-indent:-9999px;
+           background-repeat: no-repeat;
+       }
+       
+   </style>
+</head>
+<body>
+    <div class="time">
+        <div class="hours"> 
+            <span></span>
+            <span></span>
+        </div>
+         <div class="minutes">
+            <span></span>
+            <span></span>
+        </div>
+         <div class="seconds">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    
+    
+</body>
+</html>

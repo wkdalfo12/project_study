@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script type="text/javascript">
+          $(document).ready(function(){                               //문서가 준비되면 실행해~ 라는뜻 
+              
+            // document.getElementByClass('btn').innerHtml('확인');              //자바스크립트에서의방법
+            $('.btn').html('확인');                                             //제이커리에서의방법(버튼 '눌러'의 글자가 '확인'으로 바뀜)
+             $('.box').css({
+                 'border':'1px #F00 solid',
+                 'width':'100px',
+                 'height':'100px'});
+          })
+
+          
+      </script>
+                                 
+    
+</head>
+<body>
+    <button class="btn">눌러</button>
+    <div class="box">
+        
+        
+    </div>
+</body>
+</html>

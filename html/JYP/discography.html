@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="discography.css" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <title>JYP</title>
+      <style type="text/css">
+          
+      </style>
+      <script type="text/javascript">
+          
+          
+        //   $(function(){
+        //       $('.top_right button').click(function(){
+                  
+                  
+        //         //   $('.top_right li').css({'margin':0}).toggle(1000);
+        //         //   $('.top_right li').fadeOut().css({'display':'block'});           하연언니가한거ㅋㅋㅋㅋㅋㅋㅋ 
+                 
+                
+        //         if(!$('.top_right li').is('.on')){
+        //             $('.top_right li').addClass('on').css({'margin':0}).show(1000);
+        //         }else{
+        //              $('.top_right li').removeClass('on').css({'margin':0}).hide(1000);
+        //         }
+                
+        //       })    
+        //   })
+          
+          
+          $(function(){
+              $('.top_right button').click(function(){
+                  
+              $('.top_right li').toggle();
+              })    
+          })
+          
+           var aa = true;
+          
+          $(window).resize(function(){
+                  if( $(window).width() < 720 && aa){
+                      
+                      $('.top_right li').css({'display':'none'})
+                      aa = false;
+                     
+                      
+                  }else if($(window).width() > 720 && !aa){
+                      
+                      $('.top_right li').css({'display':'inline-block'})
+                       aa = true;
+                    }
+                
+              })
+          
+          
+      </script>
+</head>
+<body>
+    <div class="wrapper">
+          <div class="top">
+             <div class="top_left"><a href="https://projeck-study-mirae-me.c9users.io/html/JYP/jyp.html"></a></div>
+                    
+                        <ul class="top_right">
+                             <button>Main Menu</button>
+                             <li><a href="https://projeck-study-mirae-me.c9users.io/html/JYP/profile.html">PROFILE</a></li>
+                             <li><a href="https://projeck-study-mirae-me.c9users.io/html/JYP/discography.html">DISCOGRAPHY</a></li>
+                             <li><a href="https://projeck-study-mirae-me.c9users.io/html/JYP/gallery.html">GALLERY</a></li>
+                             <li><a href="https://projeck-study-mirae-me.c9users.io/html/JYP/video.html">VIDEO</a></li>
+                             <li><a href="https://projeck-study-mirae-me.c9users.io/html/JYP/notice.html">NOTICE</a></li>
+                             <li><a href="https://projeck-study-mirae-me.c9users.io/html/JYP/schedule.html">SCHEDULE</a></li>
+                        </ul>
+                    </div>
+          <section>
+              <div class="sect">
+                  <div id="sect-title">DISCOGRAPHY</div>
+              </div>
+              <div id="sect-main">
+                  <div id="btn-global">
+                      <a href="">KR</a>
+                      <a href="">EN</a>
+                      <a href="">JP</a>
+                      <a href="">CH</a>
+                  </div>
+                  <div class="clear"></div>
+                  <div class="fullbox">
+                      <div class="box-l">
+                          <img src="jypimg/album.JPG" >
+                          <div class="tracklist">
+                              <p>TRACKLIST </p>
+                              <ul>
+                                  <li>
+                                      1. Bounce
+                                      <br />
+                                      2. 꽂혔어
+                                      <br />
+                                      3. 이 노래가 끝나기 전에 (feat. 수지)
+                                      <br />
+                                      4. Bounce (Instrumental)
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="box-r">
+                          <div class="album-title">
+                              <h2>Bounce</h2>
+                              <p>2012-05-20</p>
+                              <div class="clear"></div>
+                          </div>
+                          <h3>Ready for the world</h3>
+                          <div class="clear"></div>
+                          <p>
+                              JJ Project’의 1st ALBUM 「Bounce」! 
+                              <br />
+                              JYP엔터테인먼트가 선보이는 신예 듀오 ‘JJ Project’가 2012년 5월 20일 첫 앨범을 공개하며 음악 팬들 앞에 모습을 드러낸다. 
+                              <br />
+                              이번 앨범에는 JJ Project 특유의, 넘치는 에너지와 자유분방함이 묻어나는 곡들이 수록되어 있으며 ‘잘 노는 10대’인 멤버들의 통통 튀는 매력을 멋지게 표현하고 있다.
+                          </p>
+                          
+                      </div>
+                   <div class="clear" style="clear:both"></div>
+                  </div>
+                  <div id="album-list" style="text-align:center">
+                      <ul>
+                          <li>
+                              <a href=""><img src="jypimg/album_1.JPG" alt="앨범이미지"></a>
+                              <p>
+                                  Bounce 
+                                  <br />
+                                  2012-05-20
+                              </p>
+                          </li>
+                      </ul>
+                      <div class="clear" style="clear:both"></div>
+                  </div>
+                  <div id="list-nav">
+                      <ul>
+                          <li>
+                              <a href="">1</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </section>
+          <footer>
+                <div class="jyplogo">
+                    <a href="http://www.jype.com/" target="_blank">JYP Entertainment</a>
+                </div>
+                <div class="snsicon">
+                    <a href="https://twitter.com/GOT7Official" target="_blank" class="sb twitter"></a>
+                    <a href="https://www.facebook.com/GOT7Official" target="_blank" class="sb facebook"></a>
+                    <a href="https://www.youtube.com/user/JJprojectOfficial" target="_blank" class="sb youtube"></a>
+                </div>
+           </footer>
+    </div>
+   
+</body>
+</html>
