@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>JYP</title>
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="../css/footer.css">
@@ -10,23 +11,44 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript" src="../js/common.js"></script>
 </head>
+
+<style>
+    .wrapper {
+        background: url(../jypimg/bg-pc.jpg);
+        -webkit-background-size: cover;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        background-position: top center;
+    }
+
+    @media screen and (max-width:770px){
+        .wrapper{
+            background: url(../jypimg/bg-720.jpg);
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: top center;
+
+        }
+    }
+</style>
 <body>
 
         <div class="wrapper">
 
             <div class="header">
                 <div class="logo-s">
-                    <a href=""></a>
+                    <a href="/index.html"></a>
                 </div>
                 <div class="nav">
                     <button>Main Menu</button>
                     <ul>
-                        <li><a href="">PROFILE</a></li>
-                        <li><a href="">DISCOGRAPHY</a></li>
-                        <li><a href="">GALLERY</a></li>
-                        <li><a href="">VIDEO</a></li>
-                        <li><a href="">NOTICE</a></li>
-                        <li><a href="">SCHEDULE</a></li>
+                        <li><a href="/profile.html">PROFILE</a></li>
+                        <li><a href="/discography.html">DISCOGRAPHY</a></li>
+                        <li><a href="/gallery.html">GALLERY</a></li>
+                        <li><a href="/video.html">VIDEO</a></li>
+                        <li><a href="/notice.html">NOTICE</a></li>
+                        <li><a href="/schedule.html">SCHEDULE</a></li>
                     </ul>
                 </div>
             </div>
