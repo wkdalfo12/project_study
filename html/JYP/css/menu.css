@@ -328,7 +328,6 @@ ul,ol{list-style:none;}
         padding:0;
         background-color:rgba(255,255,255,0.2);
         box-shadow: none;
-        position: fixed;
 
     }
     .wrapper .header .logo-s

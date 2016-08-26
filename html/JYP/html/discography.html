@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/menu.css">
 
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript" src="../js/common.js"></script>
 </head>
@@ -179,6 +180,74 @@
   display: inline-block;
 }
 
+@media screen and (max-width:770px){
+
+  .wrapper section .sect #sect-title{
+      width: 500px;
+      height: 40px;
+      -webkit-background-size: 50%;
+      background-size: 50%;
+  }
+  .wrapper section #sect-main{
+      padding:10px 0;
+  }
+  .wrapper section #sect-main .fullbox{
+
+       width: 85%;
+       margin:0 auto;
+   }
+  .wrapper section #sect-main .fullbox .box-l{
+       width: 100%;
+       float:none;
+   }
+ .wrapper section #sect-main .fullbox .box-l img{
+       max-width: 100%;
+       width: 352px;
+   }
+  .wrapper section #sect-main .fullbox .box-r{
+       width: 100%;
+       float:none;
+   }
+
+   .wrapper section #sect-main .fullbox .box-l .tracklist{
+       padding:0 0 10px 0;
+   }
+   .wrapper section #sect-main #album-list{
+       padding: 40px 0 0 0;
+   }
+   .wrapper section #sect-main #album-list ul{
+       text-align:center;
+   }
+   .wrapper section #sect-main #album-list ul li{
+       max-width: 90px;
+       margin:0 2px;
+
+   }
+   .wrapper section #sect-main #album-list ul li a img{
+       width: 92px;
+   }
+   .wrapper section #sect-main #list-nav ul li{
+       margin:5px 0 10px 0;
+   }
+}
+
+@media screen and (max-width:481px){
+    .wrapper section .sect{
+        height: 35px;
+        padding:15px 0;
+        margin-top:0;
+    }
+    .wrapper section .sect #sect-title{
+        -webkit-background-size: 45%;
+        background-size: 45%;
+        background-position: top center;
+        width: 445px;
+        height: 55px;
+    }
+    .wrapper section #sect-main{
+        padding:50px 0;
+    }
+}
 </style>
 
 <body>
