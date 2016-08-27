@@ -1,0 +1,398 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+*{margin: 0;padding: 0;}
+body,html{height: 100%;}
+body{font-family: 'Oswald', sans-serif;overflow-x: hidden;}
+ul{font-size:0;}
+
+.border(){border:1px #F00 solid;}
+
+.blind{
+    position:absolute;
+    top:0;
+    left:0;
+    right: 0;
+    bottom:0;
+    display:block;
+    background-color: rgba(0,0,0,0.7);
+    
+}
+.wrapper{
+    height: 100%;
+   
+   
+   
+    
+     .top{
+         height: 100px;
+         background-color: rgba(255,255,255,0.2);
+         box-shadow:0 1px 7px rgba(0,0,0,0.2);
+         
+             
+              
+               .top_left{
+            
+                 margin-left:20px;
+                  background-image: url(jypimg/jjlogo.png); 
+                  width: 90px;
+                  height: 70px;
+                  background-repeat: no-repeat;
+                  background-position: center;
+                  padding:15px;
+                  float: left;
+                  transition:1s;
+                   a{
+                      height: 100%;
+                      display:block;
+                     
+                                  }
+                  
+                  &:hover{
+                      transform:rotateY(180deg);
+                    
+                         }
+          
+                         }
+
+         
+         .top_right{
+                float:right;
+                list-style: none;
+                button{display: none;}
+
+                   li{ 
+                        display: inline-block;
+                        line-height: 100px;
+                       	font-size:16px;
+                       a{   
+                       		
+                            display: block;
+                            text-decoration: none;
+                            color:#3F3F3F;
+                             padding:0 18px;
+                             &:hover{
+                                display: inline-block;
+                                vertical-align: top;
+                                border-top:5px #99E000 solid;
+                                transition:0.3s;
+                                color:#99E000;
+                                    }
+                           
+                        }
+                      }
+                    }
+     }
+     section{
+         width: 100%;
+         .sect{
+             background-color: #f4f4f4;
+             width: 100%;
+             height: 80px;
+             padding-top:30px;
+             margin-top:3px;
+              #sect-title{
+             background-image: url(jypimg/title-gallery.png);
+             position: relative;
+             margin:0 auto;
+             width: 500px;
+             height: 60px;
+             background-repeat: no-repeat;
+             background-position: top center;
+             text-indent:-9999px;
+             padding-bottom: 20px;
+                  }
+              #sect-main{
+                 padding:50px 0;
+                 width: 100%;
+                 background-color: #FFF;
+                 height: 407px;
+                .fullbox{
+                    max-width: 1000px;
+                    width: 85%;
+                    margin:0 auto;
+                    height: 100%;
+                    .photos{
+                        max-width: 769px;
+                        margin:0 auto;
+                        padding:40px 0;
+                        height: 77%;
+                       ul{
+                           
+                           li{
+                            
+                               display:inline-block;
+                               margin: 0;
+                               margin-bottom:5px;
+                               width: 20%;
+                               height: auto;
+                               float:left;
+                               a{
+                                   display:block;
+                                   width: 100%;
+                                  
+                                   img{
+                                       max-width: 100%;
+                                   }
+                               }
+                               
+                              
+                           }
+                       }
+                     
+                           
+                            .disnone{
+                           
+                            width: 750px;
+                            height: 500px;
+                            position: relative;
+                            margin-top: -60px;
+                            text-align:center;
+                            z-index:-10;
+                            .bb{
+                                width: 100%;
+                               
+                                  p{
+                                   
+                               
+                                position: absolute;  
+                                
+                                img{
+                                  display:none;
+                                  margin-left:210px;
+                               }
+                               .btn{
+                                   display: none;
+                                   position: absolute;
+                                   top: -18px;
+                                    right: -18px;
+                                    width: 36px;
+                                    height: 36px;
+                                    cursor: pointer;
+                                   background-image: url(jypimg/fancybox_sprite.png);
+                               }
+                            }
+                            }
+                         
+                       }
+                      
+                     
+                       
+                    }
+                    #list-nav{
+                        text-align:center;
+                        ul{
+                           
+                            li{
+                               
+                                display: inline-block;
+                                width: 9px;
+                                height: 9px;
+                                margin: 0;
+                                padding: 0 2px;
+                                background-repeat: no-repeat;
+                                a{
+                                    
+                                    display: block;
+                                    width: 9px;
+                                    height: 9px;
+                                    text-indent: -9999px;
+                                    line-height: 0;
+                                    background-image: url(jypimg/list-nav-on.png);
+                                    background-repeat: no-repeat;
+                                }
+                            }
+                        }
+                    }
+                    
+                 }
+             }
+              .aa{
+                        width: 100%;
+                        background-color: #f4f4f4;
+                        height: 255px;
+                       
+                    }
+           }
+         
+         
+        
+     }
+     	footer{
+  		position: fixed;
+  		bottom:0;
+  		width: 100%;
+  		height: 57px;
+  		background-image: url(jypimg/footerbg.png);
+  		z-index:1;
+  		
+  		.jyplogo{
+  			a{
+  				background-image: url(jypimg/jyplogo-w.png);
+  				position: relative;
+  				display:block;
+  				width: 115px;
+  				height: 45px;
+  				text-indent: -9999px;
+  				top:5px;
+  				left:7%;
+  				float:left;
+  				z-index: 1;
+  				
+  			}
+  		}
+  		.snsicon{
+  			position: relative;
+  			display: block;
+  			width: 180px;
+  			height: 30px;
+  			text-align:center;
+  			top: 15px;
+  			right: 3%;
+  			float:right;
+  			
+  			.sb{
+  				float:left;
+  				width: 30px;
+  				height: 30px;
+  				background-repeat: no-repeat;
+  				background-position: center center;
+  				text-indent: -9999px;
+  				position:relative;
+  				vertical-align: middle;
+  				margin:0 10px 0 0;
+  				background-color: #e4e4e4;
+  				border-radius: 5px;
+  			}
+  			.twitter{
+  				background-image: url(jypimg/twitter_bird.png);
+  			}
+  			.facebook{
+  				background-image: url(jypimg/facebook.png);
+  			}
+  			.youtube{
+  				background-image: url(jypimg/youtube.png);
+  			}
+  		}
+  	}
+}
+
+
+
+
+@media screen and (min-width:905px){}
+
+@media screen and (max-width:905px) and (min-width:768px){
+
+ 
+
+.wrapper .top{
+		min-height:100px;
+		height: 50px;
+		box-shadow:none;
+		background-color: rgba(255,255,255,0.2);
+        box-shadow:0 1px 7px rgba(0,0,0,0.2);
+		padding:0;
+    
+   
+} 
+.wrapper .top .top_left {
+    			background-image: url(jypimg/jjlogo.png); 
+                  width: 90px;
+                  height: 70px;
+                  background-repeat: no-repeat;
+                  background-position: center;
+                  padding:15px;
+                  float: left;
+                  transition:1s;
+}
+.wrapper .top .top_left a{
+					height: 100%;
+                    display:block;
+} 					
+				
+                      
+.wrapper .top .top_left a:hover{
+	transform:scale(0.5,0.5) rotateY(180deg);
+	
+}
+
+.wrapper .top .top_right{
+	padding:0;
+	button{
+		font-family: 'Oswald', sans-serif;
+		display: block;
+		width:200px;
+		margin:-6px 0 0 0;
+		background-color: #99E000;
+		padding:20px 50px;
+		text-align:center;
+		color:white;
+		font-size:14px;
+		border:0;
+	   
+	}
+	
+	// &:hover{
+		
+	// 	li{
+	// 		display: block;
+	// 		margin:0;
+	// 		} 
+	// 	  }
+
+	      
+	li{
+		display:none;
+		line-height:40px;
+     	background:rgba(255,255,255,0.2);
+     	color:#99E000;
+		width: 199px;
+		height: 40px;
+		font-size:16px;
+		
+	           a{   
+	           		font-family: 'Oswald', sans-serif;
+					display: block;
+					text-decoration: none;
+					color:#99E000;
+					-webkit-transition:all 0.15s linear;
+					transition:all 0.15s linear;
+				
+				
+				&:hover{
+								width: 199px;
+                                display:inline-block;
+                                border-top:0;
+                               color:#99E000;
+     							box-shadow:inset 0px 3px #99E000;
+     						    padding:0;
+                                font-size:16px;
+                                color:#99E000;
+                                background:rgba(255,255,255,0.3);
+                                    }
+	           	}
+           	
+        }
+
+   }
+   
+   
+       
+          
+
+   .clearfix{
+       li{
+           margin:0;
+           width: 32%;
+           height:auto;
+           float:left;
+               }
+           }
+      
+                  
+            
+ 
+  
+}
+
+@media screen and (max-width:768px){}
+    

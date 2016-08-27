@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>JYP</title>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/menu.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+     <script type="text/javascript" src="../js/gal.js"></script>
+</head>
+<style>
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+body{
+    overflow-x: hidden;
+}
+.wrapper section {
+  width: 100%;
+}
+.wrapper section .sect {
+  background-color: #f4f4f4;
+  width: 100%;
+  height: 80px;
+  padding-top: 30px;
+  margin-top: 3px;
+}
+.wrapper section .sect #sect-title {
+  background-image: url(../jypimg/title-gallery.png);
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  text-indent: -9999px;
+  padding-bottom: 20px;
+}
+.wrapper section .sect #sect-main {
+  padding: 50px 0;
+  width: 100%;
+  background-color: #FFF;
+  height: 407px;
+}
+.wrapper section .sect #sect-main .fullbox {
+  max-width: 1000px;
+  width: 85%;
+  margin: 0 auto;
+  height: 100%;
+}
+.wrapper section .sect #sect-main .fullbox .photos {
+  max-width: 769px;
+  margin: 0 auto;
+  padding: 40px 0;
+  height: 77%;
+}
+.wrapper section .sect #sect-main .fullbox .photos ul li {
+  display: inline-block;
+  margin: 0;
+
+  width: 20%;
+  height: auto;
+  float: left;
+}
+.wrapper section .sect #sect-main .fullbox .photos ul li a {
+  display: block;
+  width: 100%;
+}
+.wrapper section .sect #sect-main .fullbox .photos ul li a img {
+  max-width: 100%;
+}
+.wrapper section .sect #sect-main .fullbox .photos .disnone {
+  width: 750px;
+  height: 500px;
+  position: relative;
+  margin-top: -60px;
+  text-align: center;
+  z-index: -10;
+}
+.wrapper section .sect #sect-main .fullbox .photos .disnone .bb {
+  width: 100%;
+}
+.wrapper section .sect #sect-main .fullbox .photos .disnone .bb p {
+  position: absolute;
+}
+.wrapper section .sect #sect-main .fullbox .photos .disnone .bb p img {
+  display: none;
+  margin-left: 210px;
+}
+.wrapper section .sect #sect-main .fullbox .photos .disnone .bb p .btn {
+  display: none;
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  background-image: url(../jypimg/fancybox_sprite.png);
+}
+.wrapper section .sect #sect-main .fullbox #list-nav {
+  text-align: center;
+}
+.wrapper section .sect #sect-main .fullbox #list-nav ul li {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin: 0;
+  padding: 0 2px;
+  background-repeat: no-repeat;
+}
+.wrapper section .sect #sect-main .fullbox #list-nav ul li a {
+  display: block;
+  width: 9px;
+  height: 9px;
+  text-indent: -9999px;
+  line-height: 0;
+  background-image: url(../jypimg/list-nav-on.png);
+  background-repeat: no-repeat;
+}
+.wrapper section .sect .aa {
+  width: 100%;
+  background-color: #f4f4f4;
+  height: 255px;
+}
+.black{
+    position:fixed;
+    top: 0;
+    left: 0;
+    bottom:0;
+    right:0;
+    overflow-y: scroll;
+    display: none;
+    z-index: 10;
+
+    background: url(../jypimg/fancybox_overlay.png);
+}
+
+@media screen and (max-width:770px){
+    .wrapper section .sect{
+        padding-top:32px;
+    }
+    .wrapper section .sect #sect-title{
+        -webkit-background-size: 50%;
+        background-size: 40%;
+        padding-bottom:12px;
+    }
+    .wrapper section .sect #sect-main{
+        padding:10px 0;
+        width: 100%;
+        background-color: #fff;
+        height: 630px;
+    }
+    .wrapper section .sect #sect-main .fullbox .photos{
+        max-width: 480px;
+        padding:40px 0;
+        margin:0 auto;
+        height: 100%;
+    }
+
+    .wrapper section .sect #sect-main .fullbox .photos ul li{
+        width: 32%;
+    }
+    .wrapper section .sect #sect-main .fullbox #list-nav{
+        position: absolute;
+        bottom:5%;
+        left:50%;
+    }
+
+
+    .wrapper section .sect .aa{
+        height: 50px;
+        position: absolute;
+        bottom:0;
+    }
+
+}
+
+@media screen and (max-width:481px){
+    .wrapper section .sect{
+        margin-top:0;
+        height: 35px;
+        padding-bottom:13px;
+        padding-top:18px;
+    }
+    .wrapper section .sect #sect-title{
+        -webkit-background-size: 40%;
+        background-size: 40%;
+        padding-bottom:0;
+        right:10px;
+    }
+    .wrapper section .sect #sect-main{
+        padding:50px 0;
+        width: 100%;
+        height: 300px;
+    }
+    .wrapper section .sect #sect-main .fullbox .photos{
+        max-width: 300px;
+        padding:10px 0 40px 0;
+    }
+    .wrapper section .sect #sect-main .fullbox .photos ul li{
+        display: inline-block;
+        margin: 0;
+        width: 24%;
+        height: auto;
+        float:left;
+    }
+    .wrapper section .sect #sect-main .fullbox #list-nav{
+        bottom:53%;
+    }
+    .wrapper section .sect .aa{
+        height: 470px;
+    }
+}
+</style>
+<body>
+
+        <div class="wrapper">
+
+            <div class="header">
+                <div class="logo-s">
+                    <a href="/index.html"></a>
+                </div>
+                <div class="nav">
+                    <button>Main Menu</button>
+                    <ul>
+                        <li><a href="/profile.html">PROFILE</a></li>
+                        <li><a href="/discography.html">DISCOGRAPHY</a></li>
+                        <li><a href="/gallery.html">GALLERY</a></li>
+                        <li><a href="/video.html">VIDEO</a></li>
+                        <li><a href="/notice.html">NOTICE</a></li>
+                        <li><a href="/schedule.html">SCHEDULE</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <section>
+                <div class="sect">
+                    <div id="sect-title">GALLERY</div>
+                    <div id="sect-main">
+                            <div class="fullbox">
+                                <div class="photos">
+                                   <ul class="clearfix">
+                                       <li>
+                                           <a href=""><img src="../jypimg/g_1.jpg" alt="1번이미지"></a>
+                                       </li>
+                                       <li>
+                                           <a href=""><img src="../jypimg/g_2.jpg" alt="2번이미지"></a>
+                                       </li>
+                                       <li>
+                                           <a href=""><img src="../jypimg/g_3.jpg" alt="3번이미지"></a>
+                                       </li>
+                                       <li>
+                                           <a href=""><img src="../jypimg/g_4.jpg" alt="4번이미지"></a>
+                                       </li>
+                                       <li>
+                                           <a href=""><img src="../jypimg/g_5.jpg" alt="5번이미지"></a>
+                                       </li>
+                                       <li>
+                                           <a href=""><img src="../jypimg/g_6.jpg" alt="6번이미지"></a>
+                                       </li>
+                                       <li>
+                                           <a href=""><img src="../jypimg/g_7.jpg" alt="7번이미지"></a>
+                                       </li>
+                                       <li>
+                                           <a href=""><img src="../jypimg/g_8.jpg" alt="8번이미지"></a>
+                                       </li>
+                                        <li>
+                                           <a href=""><img src="../jypimg/g_9.jpg" alt="9번이미지"></a>
+                                       </li>
+                                        <li>
+                                           <a href=""><img src="../jypimg/g_10.jpg" alt="10번이미지"></a>
+                                       </li>
+                                   </ul>
+
+                               <!--디스플레이none-->
+
+
+                                   <div class="disnone">
+                                     <div class="bb">
+                                          <p>
+                                              <img style="margin-left:0" src="../jypimg/gg1.jpg" alt="큰이미지1">
+                                              <a href="javascript:void(0)" class="btn"></a>
+                                           </p>
+                                          <p>
+                                              <img src="../jypimg/gg2.jpg"  alt="큰이미지2">
+                                              <a href="javascript:void(0)" class="btn"></a>
+                                          </p>
+                                          <p>
+                                              <img style="margin-left:0" src="../jypimg/gg_3.jpg" alt="큰이미지3">
+                                              <a href="javascript:void(0)" class="btn"></a>
+                                          </p>
+                                          <p>
+                                              <img style="margin-left:0" src="../jypimg/gg4.jpg" alt="큰이미지4">
+                                              <a href="javascript:void(0)" class="btn"></a>
+                                          </p>
+                                          <p>
+                                              <img src="../jypimg/gg5.jpg" alt="큰이미지5">
+                                              <a href="javascript:void(0)" class="btn"></a>
+                                          </p>
+                                          <p>
+                                              <img style="margin-left:0" src="../jypimg/gg6.jpg" alt="큰이미지6">
+                                              <a href="javascript:void(0)" class="btn"></a>
+                                          </p>
+                                          <p>
+                                              <img src="../jypimg/gg7.jpg" alt="큰이미지7">
+                                              <a href="javascript:void(0)" class="btn"></a>
+                                          </p>
+                                          <p>
+                                              <img src="../jypimg/gg8.jpg" alt="큰이미지8">
+                                              <a href="javascript:void(0)" class="btn"></a>
+                                          </p>
+                                          <p>
+                                              <img src="../jypimg/gg9.jpg" alt="큰이미지9">
+                                              <a href="javascript:void(0)" class="btn"></a>
+                                          </p>
+                                          <p>
+                                              <img src="../jypimg/gg10.jpg" alt="큰이미지10">
+                                              <a href="javascript:void(0)" class="btn"></a>
+                                          </p>
+                                      </div>
+                                   </div>
+
+
+                                </div>
+                                <div id="list-nav">
+                                        <ul>
+                                            <li>
+                                                <a href="">1</a>
+                                            </li>
+                                        </ul>
+                                </div>
+
+                            </div>
+                    </div>
+                    <div class="aa"></div>
+                 </div>
+
+            </section>
+
+            <footer>
+                  <div class="jyplogo">
+                      <a href="http://www.jype.com/" target="_blank">JYP Entertainment</a>
+                  </div>
+                  <div class="snsicon">
+                      <a href="https://twitter.com/GOT7Official" target="_blank" class="sb twitter"></a>
+                      <a href="https://www.facebook.com/GOT7Official" target="_blank" class="sb facebook"></a>
+                      <a href="https://www.youtube.com/user/JJprojectOfficial" target="_blank" class="sb youtube"></a>
+                  </div>
+             </footer>
+
+
+    </div>
+
+</body>
+</html>

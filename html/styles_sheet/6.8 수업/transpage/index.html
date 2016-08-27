@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link rel="stylesheet" href="../../../../font2/font/flaticon.css" type="text/css" />
+    
+    <!--mata name 이 부분 넣어준 이유 : 핸드폰으로 사이트만든거 봤을때 핸드폰에 맞게 사이즈들어가는?. -->
+    
+    
+    <title>제이제이프로젝트</title>
+        <style type="text/css">
+            
+            *{margin: 0;padding: 0;}
+            body,html{height: 100%;}
+            ul,oi{list-style:none;}
+            .wrapper{
+                    height: 100%;border:1px #F00 solid;
+                    background-image: url(../../../../img/jjproject.jpg);
+                    background-repeat: no-repeat;
+                    -webkit-background-size: cover;
+                    background-size: cover;
+                    background-position: center top;
+            }
+            
+            .wrapper .logo{
+               
+                background-image: url(../../../../img/jyplogo.png);
+                width: 350px;height: 350px;
+                background-repeat:no-repeat;
+                background-position: center 0;
+                position: absolute; top:35%;
+                transform:scale(0.9,0.9);
+                transition: 1s;
+                /*border:1px #F00 solid;*/
+            }
+            
+             .wrapper .logo:hover{
+                 transform:scale(1.2,1.2);
+                 opacity:0;
+             }
+            
+            .wrapper .header {
+                 position:fixed;
+                 width: 100%;
+                 left:0; top:0;
+                 height:100px; 
+                 background-color:rgba(255,255,255,0.7);
+                 box-shadow:0 2px 5px #000;
+                 transition:1s;
+            }
+            .wrapper .header .mark{
+                float:left;
+            }
+            .wrapper .header .nav {
+                float:right;  margin-right:20px;
+            }
+            .wrapper .header .nav button{
+                display: none;
+                
+            }
+            
+            .wrapper .header .nav ul{
+                 font-size:0;
+                
+             }
+            .wrapper .header .nav li{
+                display:inline-block;
+                font-size:12px;
+                vertical-align:top;
+                line-height:100px;
+                
+                    }
+                    
+            .wrapper .header .nav li a{
+                padding:0 15px;
+                display:block;
+                transition:0.3s;
+                text-decoration:none;
+                font-size: 1.3em;
+                font-weight:bold;color:#3F3F3F;
+                letter-spacing:-1.5px;
+                }
+            
+            .wrapper .header .nav li a:hover{
+                border-top:3px #0F0 solid; color:#0F0;
+            }
+            
+            
+            .wrapper .header .mark a{display:block;
+                width: 104px;height: 52px;padding:25px;
+                background-image: url(../../../../img/logosw.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                transition:1s;
+            
+            }
+          
+            
+            .wrapper .header .mark a:hover{
+                transform:rotateY(180deg);
+            }
+            
+          
+           
+        
+           
+            .wrapper .footer{
+                width: 100%;
+                height: 57px; 
+               
+                position:fixed;bottom:0;
+                background-color: rgba(0,0,0,0.5);
+            }
+           .wrapper .footer .footer_2{
+              height: 57px;
+             
+               padding:0 100px;
+           }
+           
+          .wrapper .footer .footer_2 .footer_2_left{
+              float:left; 
+          }
+           .footer_2_left img{
+                position:absolute;
+                bottom:5px;
+             }
+             
+           .wrapper .footer .footer_2 .footer_2_right{
+               float:right; font-size:30px; 
+                
+              
+           }
+            
+           
+            .wrapper .footer .footer_2 .footer_2_right span::before{
+                display:inline-block;
+                vertical-align:middle;line-height:30px;
+                background-color: #e4e4e4;
+                border-radius:20%;
+                width: 30px;height: 30px;
+                text-align:center; 
+                margin:0;
+               
+            }
+            
+             @media screen and (max-width:720px){
+               .wrapper{
+                   background-image: url(../../../../img/9k.jpg);
+                   background-position: center top;
+               }
+               
+               .wrapper .logo{
+                    position: relative;
+                    margin: 0 auto;
+                    top:20%;
+               }
+               
+               .wrapper .header {
+                   height: 40px;
+                   padding:0;
+                   background-color: #FFF;
+               }
+                .wrapper .header .mark a{
+                   padding: 0; 
+                   height: 40px;
+                   transform:scale(0.5,0.5);
+               }
+               
+                .wrapper .header .nav button{
+                    display:block;width: 180px;
+                    
+                    height:40px; border:0 none;
+                    padding:0 10px;
+                    font-size:1em;
+                    background-color:#99E000;
+                    color:white;
+                    cursor:pointer;
+                    
+                }
+                
+                 /*임시*/
+            .wrapper .header .nav button:hover + ul{
+                display:block;
+            }
+
+            .wrapper .header .nav ul{
+                display:none;
+                position:absolute;
+                background-color: rgba(255,255,255,0.3);
+               
+            }
+            .wrapper .header .nav ul:hover{display:block;  }
+            .wrapper .header .nav ul li:hover{border-left:5px #99E000 solid;transition:0.1s;}
+            .wrapper .header .nav ul li{ width: 175px;
+                line-height:40px;  margin-right:40px;
+            }
+            .wrapper .header .nav ul li a{
+                color:#99E000;
+                
+            }
+            .wrapper .header .nav ul li a:hover{
+                background-color: #FFF;
+                border-top:0px#F00 solid;
+                color:#999;
+            }
+            
+            .wrapper .header .mark a:hover{
+                transform:scale(0.6,0.6) rotateY(180deg);
+            }
+        
+             .wrapper .footer .footer_2 .footer_2_left img{
+                 width: 80px;
+                 display: inline-block;
+                 margin-bottom:8px;
+                
+             }
+             
+              .wrapper .footer .footer_2 .footer_2_right span::before {
+                  display: inline-block;
+                  width: 25px;
+                  height: 25px;
+                 font-size:15px;
+                 margin-top:7px;
+             }
+        
+           }
+          
+           
+        </style>
+</head>
+<body>
+       <div class="wrapper">
+            <div class="header">
+                
+                <div class="mark">
+                  <a href=""></a>
+                </div>
+                
+                <div class="nav">
+                    <button>Main Menu</button>
+                    <ul>
+                        <li><a href="">PROFILE</a></li>
+                        <li><a href="">DISCOGRAPHY</a></li>
+                        <li><a href="">GALLERY</a></li>
+                        <li><a href="">VIDEO</a></li>
+                        <li><a href="">NOTICE</a></li>
+                        <li><a href="">SCHEDULE</a></li>
+                    </ul>
+                      
+                </div>
+                    <div class="footer">
+                        <div class="footer_2">
+                            <div class="footer_2_left"><img src="../../../../img/jyplogo.png" alt=""></div>
+                            <div class="footer_2_right">
+                                <span class="flaticon-twitter-logo-silhouette"></span>
+                                <span class="flaticon-facebook-social-symbol"></span>
+                                <span class="flaticon-youtube-logo"></span>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+            
+            <div class="logo"></div>
+            
+             
+        </div>
+            
+</body>
+</html>
