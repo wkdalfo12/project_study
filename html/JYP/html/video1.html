@@ -109,6 +109,78 @@
   height: 9px;
   text-indent: -9999px;
 }
+.wrapper section #sect-main #list-nav ul .left_icon a{
+    background-image: url(../jypimg/dd.png);
+
+}
+.wrapper section #sect-main #list-nav ul .right_icon a{
+    background-image: url(../jypimg/ddr.png);
+}
+.wrapper section #sect-main #list-nav ul .left_icon a:hover{
+    background-image: url(../jypimg/ddr.png);
+}
+@media screen and (max-width:770px){
+    .wrapper section .sect{
+        width: 100%;
+        margin:0 auto;
+        height: 40px;
+        padding-bottom:30px;
+    }
+    .wrapper section .sect #sect-title{
+        height: 40px;-webkit-background-size: 50%;
+        background-size: 50%;
+    }
+    .wrapper section #sect-main{
+        padding:10px 0;
+        width: 100%;
+        height: 100%
+
+    }
+    .wrapper section #sect-main .movie{
+        margin:0 auto;
+        width: 80%;
+        height: 360px;
+    }
+
+    .wrapper section #sect-main #video-list ul li{
+        max-width: 140px;
+        vertical-align: top;
+    }
+
+    .wrapper section #sect-main #video-list ul li a img{
+        width: 100%;
+        height: 100%;
+    }
+}
+@media screen and (max-width:481px){
+    .wrapper section .sect{
+        margin:0 auto;
+        width: 100%;
+        height: 35px;
+        padding-bottom:0;
+    }
+    .wrapper section .sect #sect-title{
+        -webkit-background-size: 45%;
+        background-size: 45%;
+        width: auto;
+        bottom:10px;
+    }
+    .wrapper section #sect-main{
+        padding:50px 0;
+        width: 100%;
+        height: 100%;
+    }
+    .wrapper section #sect-main .movie{
+        height: 240px;
+    }
+    .wrapper section #sect-main #video-list ul li{
+        max-width: 90px;
+        margin:0 2px;
+    }
+}
+
+
+}
 </style>
 <body>
 
@@ -137,13 +209,13 @@
                 </div>
                 <div id="sect-main">
                     <div class="movie">
-                        <iframe width="760" height="480" src="https://www.youtube.com/embed/1yvic9sAg64?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/1yvic9sAg64?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
                     </div>
                     <div id="video-list">
                         <ul>
                             <li>
-                                <a href="EPC_CX_q8OQ">
-                                    <img src="../jypimg/mmm1.jpg" alt="동영상이미지1">
+                                <a href="UyirJxuPTIc">
+                                    <img src="../jypimg/mmm0.jpg" alt="동영상이미지1">
                                     <p>
                                         [Teaser] JJ Pro...  <br />
                                         2012.05.09
@@ -152,7 +224,7 @@
                             </li>
                             <li>
                                 <a href="tCRvp5Q3Cb4">
-                                    <img src="../jypimg/mmm2.jpg" alt="동영상이미지1">
+                                    <img src="../jypimg/mmm1.jpg" alt="동영상이미지1">
                                     <p>
                                         [Teaser] JJ Pro...  <br />
                                         2012.05.07
@@ -165,11 +237,11 @@
                     </div>
                     <div id="list-nav">
                         <ul>
-                            <li>
-                                <a href="" style="background-image: url(../jypimg/ddr.png);">1</a>
+                            <li class="left_icon">
+                                <a href="/video.html" >1</a>
                             </li>
-                            <li>
-                                <a href="" style="background-image: url(../jypimg/dd.png);">2</a>
+                            <li class="right_icon">
+                                <a href="">2</a>
                             </li>
                         </ul>
                     </div>
