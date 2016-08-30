@@ -13,6 +13,10 @@ $(function(){
           'zIndex':'100'
       })
 
+
+
+
+
     // //   x버튼
       $('.disnone .bb p').eq(idx).children('a').css({
           'display':'inline-block'
@@ -45,7 +49,7 @@ $(function(){
            $('.blind').show();
        }
 
-  // 검은 막
+  // 검은 막  
        function black(){
             var add ='';
                 add += '<div class="black">'
@@ -54,8 +58,13 @@ $(function(){
                 $('body').prepend(add)
                 $('html, body').css({'overflow':'hidden'});
                 $('.black').fadeTo(0,1)
+
             }
+
         return false;
+
     })
+
+
 
 })
