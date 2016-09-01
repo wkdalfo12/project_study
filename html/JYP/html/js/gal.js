@@ -1,5 +1,10 @@
 $(function(){
 
+    // $(window).risize(function(){
+    //
+    //
+    // })
+
     $('.photos').children('ul').children('li').click(function(){
 
         var idx = $(this).index();
@@ -14,15 +19,21 @@ $(function(){
       })
 
 
-
-
+  // 이미지 클릭 했을때 x닫는 아이콘 넣는법 :
+  // 스크립트에서 offset값과 이미지의 위드값 뽑아낸 후 x한테 부여
+    var imgwidth = $('.bb p').children('img').eq(idx).width();
+    var pp = $('.bb p').children('img').eq(idx).offset().left;
+    var xwidth = imgwidth+pp
+  console.log()
 
     // //   x버튼
       $('.disnone .bb p').eq(idx).children('a').css({
-          'display':'inline-block'
+          'display':'block',
+
       }).parent('p').siblings().children('a').css({
           'display':'none'
       })
+
     // //   x버튼 누르면 닫히게
       $('.disnone .bb p').on('click',$('.btn'),function(){
           $('.disnone').css({
@@ -49,7 +60,7 @@ $(function(){
            $('.blind').show();
        }
 
-  // 검은 막  
+  // 검은 막
        function black(){
             var add ='';
                 add += '<div class="black">'
