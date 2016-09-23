@@ -1,5 +1,8 @@
 $(function(){
 
+  
+
+
     $('.photos').children('ul').children('li').click(function(){
             var idx = $(this).index();
             blindFn();

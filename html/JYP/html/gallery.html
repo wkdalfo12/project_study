@@ -41,19 +41,19 @@ body{
   padding: 50px 0;
   width: 100%;
   background-color: #FFF;
-  height: 407px;
+  height: 100%;
 }
 .wrapper section .sect #sect-main .fullbox {
   max-width: 1000px;
   width: 85%;
   margin: 0 auto;
-  height: 100%;
+
 }
 .wrapper section .sect #sect-main .fullbox .photos {
   max-width: 769px;
   margin: 0 auto;
   padding: 40px 0;
-  height: 77%;
+  height: 100%;
 }
 .wrapper section .sect #sect-main .fullbox .photos ul li {
   display: inline-block;
@@ -134,7 +134,20 @@ body{
     background: url(../jypimg/fancybox_overlay.png);
 }
 
+/*미디어쿼리*/
+
+@media screen and (max-width:905px){
+  .wrapper .header .nav ul{
+    position: absolute;
+    z-index:100;
+  }
+}
+
 @media screen and (max-width:770px){
+    .wrapper .header .nav ul{
+      position: absolute;
+      z-index:100;
+    }
     .wrapper section .sect{
         padding-top:32px;
     }
@@ -171,6 +184,10 @@ body{
 }
 
 @media screen and (max-width:481px){
+    .wrapper .header .nav ul{
+      position: absolute;
+      z-index:100;
+    }
     .wrapper section .sect{
         margin-top:0;
         height: 35px;
@@ -316,16 +333,16 @@ body{
                                       </div>
                                    </div>
                                 </div>
-                                <div id="list-nav">
+                                <!-- <div id="list-nav">
                                         <ul>
                                             <li>
                                                 <a href="">1</a>
                                             </li>
                                         </ul>
-                                </div>
+                                </div> -->
                             </div>
                     </div>
-                    <div class="aa"></div>
+                    <!-- <div class="aa"></div> -->
                  </div>
             </section>
             <!--footer -->
