@@ -22,7 +22,7 @@ else
 <h1 class="sub_title">대출안내</h1> -->
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-<!-- 스크립트 이 부분 복붙 스크롤 내릴때 순서대로 작동하라고 플러그인 줌 (class명은 wow )-->
+<!-- 스크립트 이 부분 복붙 스크롤 내릴때 순서대로 작동하라고 플러그인 줌 (class명은 wow ) wow_min.js 이 파일 추가해야됨 -->
   <script type="text/javascript" src="wow_min.js"></script>
   <script>
 	 wow = new WOW(
