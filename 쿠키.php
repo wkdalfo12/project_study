@@ -1,5 +1,5 @@
 <!-- getCookie("cook") 부분 찾아서보기 -->
-
+<!-- getCookie / setCookie function 다있어야됨! -->
 
 
 
@@ -867,10 +867,11 @@ include_once(G5_THEME_PATH.'/tail.php');
 
 <script>
 // 사이드 메뉴관련
-$(document).ready(function(){
+
   if(getCookie("cook")){
     $('.yu_content_r ul').hide();
   }
+$(document).ready(function(){
   $('.open_btn a').click(function(){
     if ($('#side-menu').css('display') == 'none'){
       setCookie('cook', true, 1);
@@ -895,6 +896,7 @@ function close_popup(){
     }
     $("#popup").remove();
 }
+
 function getCookie( cookieName )
  {
   var search = cookieName + "=";
