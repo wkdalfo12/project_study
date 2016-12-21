@@ -1,0 +1,126 @@
+{*** 룩북 | main/lookbook.php ***}
+{ # header }
+<style>
+  #wrap{overflow: hidden;}
+  #container{width: 100%;}
+  .bx-wrapper{width: 1396px;}
+  #bx-pager{position: absolute;left: 0;bottom: 50px;}
+  #container > #content{padding:0;}
+  #bx-pager a img{border:1px solid #f6f6f6}
+
+  #bx-pager ul li:hover{opacity: 0.7;}
+</style>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+  // bx슬라이드
+    $('.bxslider').bxSlider({
+      pagerCustom: '#bx-pager',
+      mode: 'fade',
+      speed: 50
+    });
+ // 작은이미지 관련
+    $('#bx-pager').css({
+      width:function(){
+        var target = $('#bx-pager a img');
+        return target.width() * target.size();
+      }
+    });
+    $(document).mousemove(function(e){
+      var pagex = e.pageX;
+      $('#bx-pager').css({'margin-left':'-'+($('#bx-pager').width()-$(window).width())/$(window).width()*pagex+'px'})
+    });
+
+    $('#bx-pager a img').mouseenter(function(){
+        $('#bx-pager a img').stop().animate({'opacity':'1'},500);
+    });
+    $('#bx-pager a img').mouseleave(function(){
+        $('#bx-pager a img').stop().animate({'opacity':'0'},500);
+    });
+
+
+  })
+</script>
+
+<div class="contents">
+  {=includeWidget('proc/_slider_banner.html', 'bannerCode', '457286307')}
+  <!-- 슬라이더 -->
+    <ul class="bxslider">
+      <li><img src="/data/look_img/look_1.jpg" /></li>
+      <li><img src="/data/look_img/look_2.jpg" /></li>
+      <li><img src="/data/look_img/look_3.jpg" /></li>
+      <li><img src="/data/look_img/look_4.jpg" /></li>
+      <li><img src="/data/look_img/look_5.jpg" /></li>
+      <li><img src="/data/look_img/look_6.jpg" /></li>
+      <li><img src="/data/look_img/look_7.jpg" /></li>
+      <li><img src="/data/look_img/look_8.jpg" /></li>
+      <li><img src="/data/look_img/look_9.jpg" /></li>
+      <li><img src="/data/look_img/look_10.jpg" /></li>
+      <li><img src="/data/look_img/look_11.jpg" /></li>
+      <li><img src="/data/look_img/look_12.jpg" /></li>
+      <li><img src="/data/look_img/look_13.jpg" /></li>
+      <li><img src="/data/look_img/look_14.jpg" /></li>
+      <li><img src="/data/look_img/look_15.jpg" /></li>
+      <li><img src="/data/look_img/look_16.jpg" /></li>
+      <li><img src="/data/look_img/look_1.jpg" /></li>
+      <li><img src="/data/look_img/look_2.jpg" /></li>
+      <li><img src="/data/look_img/look_3.jpg" /></li>
+      <li><img src="/data/look_img/look_4.jpg" /></li>
+      <li><img src="/data/look_img/look_5.jpg" /></li>
+      <li><img src="/data/look_img/look_6.jpg" /></li>
+      <li><img src="/data/look_img/look_7.jpg" /></li>
+      <li><img src="/data/look_img/look_8.jpg" /></li>
+      <li><img src="/data/look_img/look_9.jpg" /></li>
+      <li><img src="/data/look_img/look_10.jpg" /></li>
+      <li><img src="/data/look_img/look_11.jpg" /></li>
+      <li><img src="/data/look_img/look_12.jpg" /></li>
+      <li><img src="/data/look_img/look_13.jpg" /></li>
+      <li><img src="/data/look_img/look_14.jpg" /></li>
+      <li><img src="/data/look_img/look_15.jpg" /></li>
+      <li><img src="/data/look_img/look_16.jpg" /></li>
+    </ul>
+
+    <div id="bx-pager">
+      <ul>
+        <li><a data-slide-index="0" href=""><img src="/data/look_img/look_1.jpg" /></a></li>
+        <li><a data-slide-index="1" href=""><img src="/data/look_img/look_2.jpg" /></a></li>
+        <li><a data-slide-index="2" href=""><img src="/data/look_img/look_3.jpg" /></a></li>
+        <li><a data-slide-index="3" href=""><img src="/data/look_img/look_4.jpg" /></a></li>
+        <li><a data-slide-index="4" href=""><img src="/data/look_img/look_5.jpg" /></a></li>
+        <li><a data-slide-index="5" href=""><img src="/data/look_img/look_6.jpg" /></a></li>
+        <li><a data-slide-index="6" href=""><img src="/data/look_img/look_7.jpg" /></a></li>
+        <li><a data-slide-index="7" href=""><img src="/data/look_img/look_8.jpg" /></a></li>
+        <li><a data-slide-index="8" href=""><img src="/data/look_img/look_9.jpg" /></a></li>
+        <li><a data-slide-index="9" href=""><img src="/data/look_img/look_10.jpg" /></a></li>
+        <li><a data-slide-index="10" href=""><img src="/data/look_img/look_11.jpg" /></a></li>
+        <li><a data-slide-index="11" href=""><img src="/data/look_img/look_12.jpg" /></a></li>
+        <li><a data-slide-index="12" href=""><img src="/data/look_img/look_13.jpg" /></a></li>
+        <li><a data-slide-index="13" href=""><img src="/data/look_img/look_14.jpg" /></a></li>
+        <li><a data-slide-index="14" href=""><img src="/data/look_img/look_15.jpg" /></a></li>
+        <li><a data-slide-index="15" href=""><img src="/data/look_img/look_16.jpg" /></a></li>
+        <li><a data-slide-index="16" href=""><img src="/data/look_img/look_1.jpg" /></a></li>
+        <li><a data-slide-index="17" href=""><img src="/data/look_img/look_2.jpg" /></a></li>
+        <li><a data-slide-index="18" href=""><img src="/data/look_img/look_3.jpg" /></a></li>
+        <li><a data-slide-index="19" href=""><img src="/data/look_img/look_4.jpg" /></a></li>
+        <li><a data-slide-index="20" href=""><img src="/data/look_img/look_5.jpg" /></a></li>
+        <li><a data-slide-index="21" href=""><img src="/data/look_img/look_6.jpg" /></a></li>
+        <li><a data-slide-index="22" href=""><img src="/data/look_img/look_7.jpg" /></a></li>
+        <li><a data-slide-index="23" href=""><img src="/data/look_img/look_8.jpg" /></a></li>
+        <li><a data-slide-index="24" href=""><img src="/data/look_img/look_9.jpg" /></a></li>
+        <li><a data-slide-index="25" href=""><img src="/data/look_img/look_10.jpg" /></a></li>
+        <li><a data-slide-index="26" href=""><img src="/data/look_img/look_11.jpg" /></a></li>
+        <li><a data-slide-index="27" href=""><img src="/data/look_img/look_12.jpg" /></a></li>
+        <li><a data-slide-index="28" href=""><img src="/data/look_img/look_13.jpg" /></a></li>
+        <li><a data-slide-index="29" href=""><img src="/data/look_img/look_14.jpg" /></a></li>
+        <li><a data-slide-index="30" href=""><img src="/data/look_img/look_15.jpg" /></a></li>
+        <li><a data-slide-index="31" href=""><img src="/data/look_img/look_16.jpg" /></a></li>
+      </ul>
+
+
+
+    </div>
+  <!-- 슬라이더 끝-->
+</div>
+
+
+{ # footer }
